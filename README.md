@@ -1,2 +1,2 @@
 # resistance-avalon
-Android implementation of The Resistance: Avalon. Pass &amp; Play game.
+Android implementation of <em>The Resistance: Avalon - Pass &amp; Play</em> game.
