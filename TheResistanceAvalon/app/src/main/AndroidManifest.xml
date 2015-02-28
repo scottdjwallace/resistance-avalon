@@ -16,6 +16,14 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity
+            android:name=".InstructionsActivity"
+            android:label="@string/HowToPlay" >
+        </activity>
+        <activity
+            android:name=".GameSetupActivity"
+            android:label="@string/setup" >
+        </activity>
     </application>
 
 </manifest>
