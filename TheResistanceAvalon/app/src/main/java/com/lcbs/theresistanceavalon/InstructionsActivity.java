@@ -4,14 +4,33 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 
 public class InstructionsActivity extends ActionBarActivity {
+
+    ListView stepsListView;
+
+    String[] stepsList = {
+            "Welcome to The Resistance: Avalon, a game of hidden loyalties.",
+            "To begin, select the number of players about to embark on quests. ",
+            "Input the names of all players in the order of which you are sitting."
+    };
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_instructions);
+        ListView mainListView;
+        ArrayAdapter mArrayAdapter;
+        ArrayList mNameList = new ArrayList();
+        stepsListView = (ListView) findViewById(R.id.steps_listview);
+        mArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, stepsList);
+        stepsListView.setAdapter(mArrayAdapter);
     }
 
 
