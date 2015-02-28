@@ -3,10 +3,12 @@ package com.lcbs.theresistanceavalon;
 public class GameState {
 
     private static GameState instance = null;
-    private int NUMBER_OF_PLAYERS;
+    private int NUM_OF_PLAYERS;
+    private int NUM_GOOD_PLAYERS;
+    private int NUM_BAD_PLAYERS;
 
     protected GameState() {
-        NUMBER_OF_PLAYERS = 5; // default for now
+        NUM_OF_PLAYERS = 5; // default for now
     }
 
     public static GameState getInstance() {
@@ -14,12 +16,12 @@ public class GameState {
         return instance;
     }
 
-    public int getNUMBER_OF_PLAYERS() {
-        return NUMBER_OF_PLAYERS;
+    public int getNUM_OF_PLAYERS() {
+        return NUM_OF_PLAYERS;
     }
 
-    public void setNUMBER_OF_PLAYERS(int num) {
-        NUMBER_OF_PLAYERS = num;
+    public void setNUM_OF_PLAYERS(int num) {
+        NUM_OF_PLAYERS = num;
     }
 
 

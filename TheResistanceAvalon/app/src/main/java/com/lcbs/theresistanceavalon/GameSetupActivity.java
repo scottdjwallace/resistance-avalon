@@ -1,7 +1,9 @@
 package com.lcbs.theresistanceavalon;
 
+import android.os.Debug;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -26,6 +28,9 @@ public class GameSetupActivity extends ActionBarActivity implements View.OnClick
         howManyTextView = (TextView) findViewById(R.id.howmany_textview);
         fiveButton = (Button) findViewById(R.id.five_button);
         fiveButton.setOnClickListener(this);
+        sixButton = (Button) findViewById(R.id.six_button);
+        sixButton.setOnClickListener(this);
+
     }
 
 
@@ -53,6 +58,21 @@ public class GameSetupActivity extends ActionBarActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        howManyTextView.setText("Button pressed!");
+        switch(v.getId()) {
+            case R.id.five_button:
+                howManyTextView.setText("Button 5");
+            case R.id.six_button:
+                howManyTextView.setText("Button 6");
+            case R.id.seven_button:
+                break;
+            case R.id.eight_button:
+                break;
+            case R.id.nine_button:
+                break;
+            case R.id.ten_button:
+                break;
+            default:
+                throw new RuntimeException("Unknown button ID");
+        }
     }
 }
