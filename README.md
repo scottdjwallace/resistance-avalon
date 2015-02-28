@@ -10,8 +10,3 @@ Designer: [Christina Chan] (https://github.com/cchawn)
 Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 
 Tester: [Brad Guner] (https://github.com/bradguner)
-
-### DESIGN TO DO
-
-[ ] App Logo
-[ ] Boot-up screen logo
