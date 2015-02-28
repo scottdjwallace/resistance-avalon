@@ -10,9 +10,16 @@
     <string name="HowToPlay">How To Play</string>
     <string name="title_activity_instructions">InstructionsActivity</string>
     <string name="title_activity_game_setup">GameSetupActivity</string>
+    <string name="HowMany">Select Number of Players</string>
 
     <!--BUTTONS-->
     <string name="start_game">Start New Game</string>
     <string name="instructions">How to Play</string>
+    <string name="five">5</string>
+    <string name="six">6</string>
+    <string name="seven">7</string>
+    <string name="eight">8</string>
+    <string name="nine">9</string>
+    <string name="ten">10</string>
 
 </resources>

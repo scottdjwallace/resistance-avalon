@@ -4,14 +4,28 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
-public class GameSetupActivity extends ActionBarActivity {
+public class GameSetupActivity extends ActionBarActivity implements View.OnClickListener{
+
+    Button fiveButton;
+    Button sixButton;
+    Button sevenButton;
+    Button eightButton;
+    Button nineButton;
+    Button tenButton;
+    TextView howManyTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_setup);
+        howManyTextView = (TextView) findViewById(R.id.howmany_textview);
+        fiveButton = (Button) findViewById(R.id.five_button);
+        fiveButton.setOnClickListener(this);
     }
 
 
@@ -35,5 +49,10 @@ public class GameSetupActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onClick(View v) {
+        howManyTextView.setText("Button pressed!");
     }
 }
