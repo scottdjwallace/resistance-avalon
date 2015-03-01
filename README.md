@@ -12,7 +12,7 @@ Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 Tester: [Brad Guner] (https://github.com/bradguner)
 
 ### To-Do
-* Create next Intent which is the first page asking players if they are ready to begin playing
+* Create next Intent for the reveal roudn, where players can see if they are good or bad
 * Then GameState must include something to handle going round by round (System design needed for this)
 
 ### Progress
