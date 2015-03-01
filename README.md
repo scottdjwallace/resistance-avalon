@@ -12,5 +12,5 @@ Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 Tester: [Brad Guner] (https://github.com/bradguner)
 
 ### To-Do
-* Once all names are entered put them into a String[ ] and call createPlayers()
-* Then we can get into running a game
+* Create next Intent which is the first page asking players if they are ready to begin playing
+* Then GameState must include something to handle going round by round (System design needed for this)
