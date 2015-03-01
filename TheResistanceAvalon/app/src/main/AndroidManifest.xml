@@ -24,6 +24,10 @@
             android:name=".GameSetupActivity"
             android:label="@string/setup" >
         </activity>
+        <activity
+            android:name=".EnterPlayerNames"
+            android:label= "@string/enterNames" >
+        </activity>
     </application>
 
 </manifest>

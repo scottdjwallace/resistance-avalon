@@ -67,22 +67,22 @@ public class GameSetupActivity extends ActionBarActivity implements View.OnClick
     public void onClick(View v) {
         switch(v.getId()) {
             case R.id.five_button:
-                howManyTextView.setText("Button 5");
+                GameState.getInstance().setNumPlayers(5);
                 break;
             case R.id.six_button:
-                howManyTextView.setText("Button 6");
+                GameState.getInstance().setNumPlayers(6);
                 break;
             case R.id.seven_button:
-                howManyTextView.setText("Button 7");
+                GameState.getInstance().setNumPlayers(7);
                 break;
             case R.id.eight_button:
-                howManyTextView.setText("Button 8");
+                GameState.getInstance().setNumPlayers(8);
                 break;
             case R.id.nine_button:
-                howManyTextView.setText("Button 9");
+                GameState.getInstance().setNumPlayers(9);
                 break;
             case R.id.ten_button:
-                howManyTextView.setText("Button 10");
+                GameState.getInstance().setNumPlayers(10);
                 break;
             default:
                 throw new RuntimeException("Unknown button ID");
