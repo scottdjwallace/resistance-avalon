@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
+import android.widget.Toast;
+
+import java.util.ArrayList;
 
 
 public class EnterPlayerNames extends ActionBarActivity {
@@ -30,6 +33,8 @@ public class EnterPlayerNames extends ActionBarActivity {
     EditText playerEight;
     EditText playerNine;
     EditText playerTen;
+    EditText[] editTexts = {playerOne, playerTwo, playerThree, playerFour, playerFive, playerSix, playerSeven, playerEight, playerNine, playerTen};
+
 
 
     @Override
@@ -43,21 +48,17 @@ public class EnterPlayerNames extends ActionBarActivity {
 
     // Dynamically creates EditText Elements
     private void createEditTexts() {
-        int num = 1;
-        for (int i = 0; i < NAMES_NEEDED; i++) {
-            EditText editText = new EditText(getBaseContext());
-            containerLayout.addView(editText);
-            editText.setGravity(Gravity.CENTER_HORIZONTAL);
-            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) editText.getLayoutParams();
+        for (int i = 1; i <= NAMES_NEEDED; i++) {
+            editTexts[i-1] = new EditText(getBaseContext());
+            containerLayout.addView(editTexts[i-1]);
+            editTexts[i-1].setGravity(Gravity.CENTER_HORIZONTAL);
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) editTexts[i-1].getLayoutParams();
             layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
             layoutParams.setMargins(30, 20, 30, 0);
-            editText.setLayoutParams(layoutParams);
-            editText.setHint("Player " + num + "\'s Name");
-            editText.setHintTextColor(Color.BLACK); // change these later
-            editText.setTextColor(Color.BLACK); // change these later
-            editText.setTag("PLAYER" + num);
-            editText.setId(i+1);
-            num++;
+            editTexts[i-1].setLayoutParams(layoutParams);
+            editTexts[i-1].setHint("Player " + i + "\'s Name");
+            editTexts[i-1].setHintTextColor(Color.BLACK); // change these later
+            editTexts[i-1].setTextColor(Color.BLACK); // change these later
         }
         // create submit button here
         final Button submitButton = new Button(this);
@@ -76,12 +77,19 @@ public class EnterPlayerNames extends ActionBarActivity {
 
     // Saves the names entered and starts new game
     public void saveNamesStartGame() {
-        //get all the names inputted -- if none have a plan
-        // editText.getText().toString()
-
-        //put them in an String[]
-        //call GameState.createPlayers?
-        //Start new intent -- starting game
+        String[] names = new String[NAMES_NEEDED];
+        String name;
+        for (int i = 0; i < NAMES_NEEDED; i++) {
+            name = editTexts[i].getText().toString();
+            if (name.matches("")) {
+                Toast.makeText(this, "You all needth a name first.", Toast.LENGTH_SHORT).show();
+                return;
+            }
+            names[i] = name;
+        }
+        GameState.getInstance().createPlayers(names);
+        // Start game
+        // next Intent
     }
 
     @Override
