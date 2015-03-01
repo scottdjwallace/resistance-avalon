@@ -14,3 +14,14 @@ Tester: [Brad Guner] (https://github.com/bradguner)
 ### To-Do
 * Create next Intent which is the first page asking players if they are ready to begin playing
 * Then GameState must include something to handle going round by round (System design needed for this)
+
+### Progress
+- [x] Landing Activity
+- [x] Rough How to Play Activity
+- [x] Pick How many players activity
+- [x] Dynamically display EditText fields to input names based on number of players selected
+- [x] Save names into GameState and decide whether the player created is good or bad
+- [ ] Verification Activity -- Last page before beginning to play, displays current score (zero-zero), players/names, let's quest button
+- [ ] Design and Flow of Rounds 1 - 5 
+- [ ] Implementing the design for the game being played
+- [ ] Adding Design Stage & Making things look nice
