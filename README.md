@@ -10,3 +10,8 @@ Designer: [Christina Chan] (https://github.com/cchawn)
 Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 
 Tester: [Brad Guner] (https://github.com/bradguner)
+
+### To-Do
+* EnterPlayerNames class -- create EditText fields based on NAMES_NEEDED int
+* Once all names are entered put them into a String[ ] and call createPlayers()
+* Then we can get into running a game
