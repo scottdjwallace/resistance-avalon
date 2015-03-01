@@ -30,7 +30,14 @@ public class GameSetupActivity extends ActionBarActivity implements View.OnClick
         fiveButton.setOnClickListener(this);
         sixButton = (Button) findViewById(R.id.six_button);
         sixButton.setOnClickListener(this);
-
+        sevenButton = (Button) findViewById(R.id.seven_button);
+        sevenButton.setOnClickListener(this);
+        eightButton = (Button) findViewById(R.id.eight_button);
+        eightButton.setOnClickListener(this);
+        nineButton = (Button) findViewById(R.id.nine_button);
+        nineButton.setOnClickListener(this);
+        tenButton = (Button) findViewById(R.id.ten_button);
+        tenButton.setOnClickListener(this);
     }
 
 
@@ -61,15 +68,21 @@ public class GameSetupActivity extends ActionBarActivity implements View.OnClick
         switch(v.getId()) {
             case R.id.five_button:
                 howManyTextView.setText("Button 5");
+                break;
             case R.id.six_button:
                 howManyTextView.setText("Button 6");
+                break;
             case R.id.seven_button:
+                howManyTextView.setText("Button 7");
                 break;
             case R.id.eight_button:
+                howManyTextView.setText("Button 8");
                 break;
             case R.id.nine_button:
+                howManyTextView.setText("Button 9");
                 break;
             case R.id.ten_button:
+                howManyTextView.setText("Button 10");
                 break;
             default:
                 throw new RuntimeException("Unknown button ID");
