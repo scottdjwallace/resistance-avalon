@@ -86,10 +86,10 @@ public class GameState {
                 motive = 0;
                 bad++;
             }
-            players[i] = new Player(names[0], motive);
+            players[i] = new Player(names[i], motive);
         }
     }
-    
+
     private int randInt(int min, int max) {
 
         Random rand = new Random();

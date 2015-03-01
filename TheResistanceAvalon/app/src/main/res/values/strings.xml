@@ -15,7 +15,7 @@
     <string name="enterNames">Enter Player Names</string>
 
     <!--HINTS-->
-    <string name="player_name">Player's Name</string>
+    <string name="player_name">Player\'s Name</string>
 
     <!-- BUTTONS -->
     <string name="start_game">Start New Game</string>

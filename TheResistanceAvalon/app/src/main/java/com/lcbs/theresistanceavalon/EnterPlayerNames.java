@@ -4,14 +4,29 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.EditText;
 
 
 public class EnterPlayerNames extends ActionBarActivity {
+
+    private int NAMES_NEEDED;
+    EditText playerOne;
+    EditText playerTwo;
+    EditText playerThree;
+    EditText playerFour;
+    EditText playerFive;
+    EditText playerSix;
+    EditText playerSeven;
+    EditText playerEight;
+    EditText playerNine;
+    EditText playerTen;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_player_names);
+        NAMES_NEEDED = GameState.getInstance().getNumPLayers();
     }
 
 
