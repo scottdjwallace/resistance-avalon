@@ -1,14 +1,19 @@
 package com.lcbs.theresistanceavalon;
 
+import android.content.Context;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.view.Gravity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.EditText;
+import android.widget.LinearLayout;
 
 
 public class EnterPlayerNames extends ActionBarActivity {
 
+    LinearLayout containerLayout;
+    Context context;
     private int NAMES_NEEDED;
     EditText playerOne;
     EditText playerTwo;
@@ -26,9 +31,30 @@ public class EnterPlayerNames extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_player_names);
+        containerLayout = (LinearLayout)findViewById(R.id.linear1);
         NAMES_NEEDED = GameState.getInstance().getNumPLayers();
+        createEditTexts();
     }
 
+    // Dynamically creates EditText Elements
+    private void createEditTexts() {
+        for (int i = 0; i < NAMES_NEEDED; i++) {
+            EditText editText = new EditText(getBaseContext());
+            containerLayout.addView(editText);
+            editText.setGravity(Gravity.CENTER_HORIZONTAL);
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) editText.getLayoutParams();
+            layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
+            layoutParams.setMargins(15, 0, 0, 0);
+            editText.setLayoutParams(layoutParams);
+            editText.setHint("Player " + (i+1) + "\'s Name");
+            editText.setTag("PLAYER" + (i+1));
+        }
+    }
+
+    // Saves the names entered and starts new game
+    public void saveNamesStartGame() {
+
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
