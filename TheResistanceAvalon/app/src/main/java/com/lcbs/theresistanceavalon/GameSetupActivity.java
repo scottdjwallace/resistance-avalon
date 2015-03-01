@@ -1,5 +1,6 @@
 package com.lcbs.theresistanceavalon;
 
+import android.content.Intent;
 import android.os.Debug;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -87,5 +88,7 @@ public class GameSetupActivity extends ActionBarActivity implements View.OnClick
             default:
                 throw new RuntimeException("Unknown button ID");
         }
+        Intent intent = new Intent(this, EnterPlayerNames.class);
+        startActivity(intent);
     }
 }

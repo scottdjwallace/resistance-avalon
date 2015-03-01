@@ -11,6 +11,9 @@ public class Player {
     }
 
     public String getName() { return name; }
-    public int getMotive() { return motive; }
+    public String getMotive() {
+        if (motive == 1) return "Good";
+        return "Evil";
+    }
 
 }

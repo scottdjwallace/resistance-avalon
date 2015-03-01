@@ -79,13 +79,17 @@ public class GameState {
                 motive = 1;
                 good++;
             }
-            else { // else its good, and we can be sure not to go over
+            else if (motive == 1 && good < NUM_GOOD_PLAYERS) { // good and we need good
                 good++;
+            }
+            else { // good and we don't need good
+                motive = 0;
+                bad++;
             }
             players[i] = new Player(names[0], motive);
         }
     }
-
+    
     private int randInt(int min, int max) {
 
         Random rand = new Random();

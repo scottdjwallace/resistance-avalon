@@ -14,6 +14,9 @@
     <string name="HowMany">Select Number of Players</string>
     <string name="enterNames">Enter Player Names</string>
 
+    <!--HINTS-->
+    <string name="player_name">Player's Name</string>
+
     <!-- BUTTONS -->
     <string name="start_game">Start New Game</string>
     <string name="instructions">How to Play</string>
@@ -23,6 +26,7 @@
     <string name="eight">8</string>
     <string name="nine">9</string>
     <string name="ten">10</string>
+    <string name="submit">Submit</string>
 
 
 </resources>
