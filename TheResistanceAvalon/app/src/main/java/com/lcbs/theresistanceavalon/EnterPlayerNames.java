@@ -63,13 +63,12 @@ public class EnterPlayerNames extends ActionBarActivity {
         final Button submitButton = new Button(this);
         submitButton.setText("Submit");
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(15,15,15,15); // left, top, right, botton
+        lp.setMargins(15,15,15,15); // left, top, right, bottom
         submitButton.setWidth(200);
         submitButton.setGravity(Gravity.CENTER_HORIZONTAL);
         containerLayout.addView(submitButton, lp);
         submitButton.setOnClickListener(new View.OnClickListener() {
             public void onClick(View view) {
-                submitButton.setText("It worked");
                 saveNamesStartGame();
             }
         });
@@ -77,7 +76,12 @@ public class EnterPlayerNames extends ActionBarActivity {
 
     // Saves the names entered and starts new game
     public void saveNamesStartGame() {
+        //get all the names inputted -- if none have a plan
+        // editText.getText().toString()
 
+        //put them in an String[]
+        //call GameState.createPlayers?
+        //Start new intent -- starting game
     }
 
     @Override
