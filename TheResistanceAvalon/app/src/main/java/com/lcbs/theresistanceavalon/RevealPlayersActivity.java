@@ -16,7 +16,9 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
     Button readyButton;
     private int counter;
     private Player[] plyrs;
-    private int reveal;
+    private boolean reveal;
+    private boolean doneRevealing;
+    private int num;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,7 +30,10 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
         motiveTextView = (TextView) findViewById(R.id.player_motive_textview);
         plyrs = GameState.getInstance().getPlayers();
         nameTextView.setText(plyrs[counter].getName());
-        counter = 1;
+        counter = 0;
+        reveal = true;
+        doneRevealing = false;
+        num = GameState.getInstance().getNumPLayers();
     }
 
 
@@ -56,11 +61,23 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
 
     @Override
     public void onClick(View v) {
-        // first time show motive
-        // then show ready for next player -- change motive and change name and change button
-        // last players button == Start Game
-        // once we are done new Intent start game
+        if (doneRevealing) {
+            // start new intent
+        }
 
+        if (reveal) {
+            // reveal player
+            motiveTextView.setText("You are " + plyrs[counter].getMotive());
+            readyButton.setText("Next Player");
+            if (counter == num - 1) { readyButton.setText("Start Questing"); doneRevealing = true; }
+            counter++;
+        } else {
+            //ready next player
+            nameTextView.setText(plyrs[counter].getName());
+            motiveTextView.setText("You are ...");
+            readyButton.setText("Ready to Reveal");
+        }
+        reveal = !reveal;
     }
 
 }
