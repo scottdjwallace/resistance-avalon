@@ -1,6 +1,7 @@
 package com.lcbs.theresistanceavalon;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
@@ -88,8 +89,9 @@ public class EnterPlayerNames extends ActionBarActivity {
             names[i] = name;
         }
         GameState.getInstance().createPlayers(names);
-        // Start game
-        // next Intent
+
+        Intent intent = new Intent(this, RevealPlayersActivity.class);
+        startActivity(intent);
     }
 
     @Override

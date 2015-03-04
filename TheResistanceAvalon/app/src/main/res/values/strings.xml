@@ -13,6 +13,8 @@
     <string name="title_activity_enter_player_names">EnterPlayerNames</string>
     <string name="HowMany">Select Number of Players</string>
     <string name="enterNames">Enter Player Names</string>
+    <string name="nameHolder">Player Name</string>
+    <string name="motiveHolder">You are ...</string>
 
     <!--HINTS-->
     <string name="player_name">Player\'s Name</string>
@@ -27,6 +29,8 @@
     <string name="nine">9</string>
     <string name="ten">10</string>
     <string name="submit">Submit</string>
+    <string name="title_activity_reveal_players">RevealPlayersActivity</string>
+    <string name="ready">Ready</string>
 
 
 </resources>

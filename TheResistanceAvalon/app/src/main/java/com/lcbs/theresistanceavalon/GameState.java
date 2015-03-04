@@ -15,6 +15,7 @@ public class GameState {
         NUM_OF_PLAYERS = 5;
         NUM_GOOD_PLAYERS = 3;
         NUM_BAD_PLAYERS = 2;
+        players = new Player[10];
     }
 
     public static GameState getInstance() {
@@ -28,6 +29,7 @@ public class GameState {
     }
     public int getNumGoodPlayers() { return NUM_GOOD_PLAYERS; }
     public int getNumBadPlayers() { return NUM_BAD_PLAYERS; }
+    public Player[] getPlayers() { return players; }
 
     // Mutators
     public void setNumPlayers(int num) {

@@ -26,7 +26,11 @@
         </activity>
         <activity
             android:name=".EnterPlayerNames"
-            android:label= "@string/enterNames" >
+            android:label="@string/enterNames" >
+        </activity>
+        <activity
+            android:name=".RevealPlayersActivity"
+            android:label="@string/title_activity_reveal_players" >
         </activity>
     </application>
 
