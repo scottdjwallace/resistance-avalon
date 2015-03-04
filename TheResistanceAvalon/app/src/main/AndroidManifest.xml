@@ -32,6 +32,10 @@
             android:name=".RevealPlayersActivity"
             android:label="@string/title_activity_reveal_players" >
         </activity>
+        <activity
+            android:name=".RoundSummaryActivity"
+            android:label="@string/title_activity_round_summary" >
+        </activity>
     </application>
 
 </manifest>
