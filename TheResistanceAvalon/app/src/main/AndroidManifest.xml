@@ -36,6 +36,10 @@
             android:name=".RoundSummaryActivity"
             android:label="@string/title_activity_round_summary" >
         </activity>
+        <activity
+            android:name=".BeginGameActivity"
+            android:label="@string/title_activity_begin_game" >
+        </activity>
     </application>
 
 </manifest>
