@@ -64,8 +64,7 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
     public void onClick(View v) {
         if (doneRevealing) {
             // start new intent
-            doneRevealing = false;
-            Intent intent = new Intent(this, BeginGameActivity.class);
+            Intent intent = new Intent(this, RoundSummaryActivity.class);
             startActivity(intent);
         }
 
