@@ -14,9 +14,13 @@ Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 Tester: [Brad Guner] (https://github.com/bradguner)
 
 ### To-Do
-* Design RoundSummaryActivity -- in between rounds stage for score 
-* Design individual round play
-* Design how GameState handles these
+1. NewQuestActivity -- Quest # + Button to begin, GameState -- should help maintain quest #
+2. PickQuestActivity -- Person who is choosing quest, picks players
+3. VoteActivity -- public vote on quest, goes forth or doesn't
+4. Vote fails -- pick new leader, go to step 2
+5. Vote goes forth, step 6
+6. QuestVoteActivity -- members of quest vote on quest. needs to be a secret vote
+7. RoundSummary -- reveals vote, and score, go to NewQuestActivity
 
 ### Progress
 - [x] Landing Activity
@@ -28,3 +32,4 @@ Tester: [Brad Guner] (https://github.com/bradguner)
 - [ ] Design and Flow of Rounds 1 - 5 
 - [ ] Implementing the design for the game being played
 - [ ] Adding Design Stage & Making things look nice
+- [ ] Optimization
