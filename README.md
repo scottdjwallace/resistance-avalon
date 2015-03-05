@@ -14,7 +14,8 @@ Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 Tester: [Brad Guner] (https://github.com/bradguner)
 
 ### To-Do
-* Fix RevealRoundActivity ActionBar Title
+Fix RevealRoundActivity ActionBar Title
+
 1. NewQuestActivity -- Quest # + Button to begin, GameState -- should help maintain quest #
 2. PickQuestActivity -- Person who is choosing quest, picks players
 3. VoteActivity -- public vote on quest, goes forth or doesn't
