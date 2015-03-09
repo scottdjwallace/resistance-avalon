@@ -43,7 +43,7 @@ public class EnterPlayerNames extends ActionBarActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_enter_player_names);
         containerLayout = (LinearLayout)findViewById(R.id.linear1);
-        NAMES_NEEDED = GameState.getInstance().getNumPLayers();
+        NAMES_NEEDED = GameState.getInstance().getNumPlayers();
         createEditTexts();
     }
 

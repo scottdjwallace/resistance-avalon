@@ -34,7 +34,7 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
         counter = 0;
         reveal = true;
         doneRevealing = false;
-        num = GameState.getInstance().getNumPLayers();
+        num = GameState.getInstance().getNumPlayers();
     }
 
 
