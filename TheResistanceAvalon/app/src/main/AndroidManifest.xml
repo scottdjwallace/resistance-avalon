@@ -36,6 +36,26 @@
             android:name=".RoundSummaryActivity"
             android:label="@string/title_activity_round_summary" >
         </activity>
+        <activity
+            android:name=".RoundOneActivity"
+            android:label="@string/title_activity_round_one" >
+        </activity>
+        <activity
+            android:name=".RoundTwoActivity"
+            android:label="@string/title_activity_round_two" >
+        </activity>
+        <activity
+            android:name=".RoundThreeActivity"
+            android:label="@string/title_activity_round_three" >
+        </activity>
+        <activity
+            android:name=".RoundFourActivity"
+            android:label="@string/title_activity_round_four" >
+        </activity>
+        <activity
+            android:name=".RoundFiveActivity"
+            android:label="@string/title_activity_round_five" >
+        </activity>
     </application>
 
 </manifest>

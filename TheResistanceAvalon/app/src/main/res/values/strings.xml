@@ -8,13 +8,18 @@
     <string name="app_name">The Resistance: Avalon</string>
     <string name="setup">Set Up New Game</string>
     <string name="HowToPlay">How To Play</string>
-    <string name="title_activity_instructions">InstructionsActivity</string>
-    <string name="title_activity_game_setup">GameSetupActivity</string>
-    <string name="title_activity_enter_player_names">EnterPlayerNames</string>
+    <string name="title_activity_instructions">How to Play</string>
+    <string name="title_activity_game_setup">Set up a new Game</string>
+    <string name="title_activity_enter_player_names">Enter Player Names</string>
     <string name="HowMany">Select Number of Players</string>
     <string name="enterNames">Enter Player Names</string>
     <string name="nameHolder">Player Name</string>
     <string name="motiveHolder">You are ...</string>
+    <string name="roundOne">Round 1</string>
+    <string name="roundTwo">Round 2</string>
+    <string name="roundThree">Round 3</string>
+    <string name="roundFour">Round 4</string>
+    <string name="roundFive">Round 5</string>
 
     <!--HINTS-->
     <string name="player_name">Player\'s Name</string>
@@ -29,9 +34,15 @@
     <string name="nine">9</string>
     <string name="ten">10</string>
     <string name="submit">Submit</string>
-    <string name="title_activity_reveal_players">RevealPlayersActivity</string>
+    <string name="title_activity_reveal_players">Revealing Players</string>
     <string name="ready">Ready to Reveal</string>
-    <string name="title_activity_round_summary">RoundSummaryActivity</string>
+    <string name="title_activity_round_summary">Quest Summary</string>
+    <string name="title_activity_round_one">Round 1</string>
+    <string name="beginRound">Begin Round</string>
+    <string name="title_activity_round_two">Round 2</string>
+    <string name="title_activity_round_three">Round 3</string>
+    <string name="title_activity_round_four">Round 4</string>
+    <string name="title_activity_round_five">Round 5y</string>
 
 
 </resources>

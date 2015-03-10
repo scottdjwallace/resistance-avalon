@@ -1,0 +1,28 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.lcbs.theresistanceavalon.RoundTwoActivity"
+    android:weightSum="1">
+
+    <TextView
+        android:id="@+id/round_one_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="240dp"
+        android:textSize="50dp"
+        android:text="@string/roundTwo"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/begin_round_button"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="140dp"
+        android:text="@string/beginRound"/>
+
+</LinearLayout>
