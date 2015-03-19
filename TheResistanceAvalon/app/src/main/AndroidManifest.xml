@@ -56,6 +56,10 @@
             android:name=".RoundFiveActivity"
             android:label="@string/title_activity_round_five" >
         </activity>
+        <activity
+            android:name=".AssembleTeamActivity"
+            android:label="@string/title_activity_assemble_team" >
+        </activity>
     </application>
 
 </manifest>

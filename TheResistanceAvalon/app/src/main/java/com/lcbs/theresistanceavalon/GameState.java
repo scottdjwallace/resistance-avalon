@@ -16,6 +16,7 @@ public class GameState {
     private int NEXT_PLAYER;
     private Player[] players;
     private int[][] PLAYERS_PER_ROUND;
+    private Player[] TEAM_THIS_ROUND;
 
     // protected constructor
     protected GameState() {
@@ -158,7 +159,7 @@ public class GameState {
         return randomNum;
     } // end randInt
 
-    public Player getTeamCaptain() {
+    public String getTeamCaptain() {
         int i = NEXT_PLAYER;
         if (i > NUM_OF_PLAYERS - 1) {
             i = 0;
@@ -166,7 +167,12 @@ public class GameState {
         } else {
             NEXT_PLAYER++;
         }
-        return players[i];
+        return players[i].getName();
     }
+
+    public void setTeamThisRound(Player[] selected) {
+        TEAM_THIS_ROUND = selected;
+    }
+    public Player[] getTeamThisRound() { return TEAM_THIS_ROUND; }
 
 } // end GameState.java

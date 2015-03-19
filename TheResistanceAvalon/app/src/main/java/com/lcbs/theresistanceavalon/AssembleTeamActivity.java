@@ -1,31 +1,35 @@
 package com.lcbs.theresistanceavalon;
 
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
 
-public class RoundOneActivity extends ActionBarActivity implements View.OnClickListener {
+public class AssembleTeamActivity extends ActionBarActivity {
 
-    Button beginRoundButton;
+    private String CAPTAIN;
+    private int TEAM_SIZE;
+    private int RND;
+    private Player[] selected;
+    private Player[] ALL_PLAYERS;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_round_one);
-        beginRoundButton = (Button) findViewById(R.id.begin_round_button);
-        beginRoundButton.setOnClickListener(this);
+        setContentView(R.layout.activity_assemble_team);
+        CAPTAIN = GameState.getInstance().getTeamCaptain();
+        TEAM_SIZE = GameState.getInstance().getNumPlayersThisRound();
+        RND = GameState.getInstance().getRound();
+        selected = new Player[TEAM_SIZE];
+        ALL_PLAYERS = GameState.getInstance().getPlayers();
     }
 
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_round_one, menu);
+        getMenuInflater().inflate(R.menu.menu_assemble_team, menu);
         return true;
     }
 
@@ -42,11 +46,5 @@ public class RoundOneActivity extends ActionBarActivity implements View.OnClickL
         }
 
         return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onClick(View v) {
-        Intent intent = new Intent(this, AssembleTeamActivity.class);
-        startActivity(intent);
     }
 }
