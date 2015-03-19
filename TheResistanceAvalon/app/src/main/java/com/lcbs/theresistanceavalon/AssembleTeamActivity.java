@@ -4,6 +4,7 @@ import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.TextView;
 
 
 public class AssembleTeamActivity extends ActionBarActivity {
@@ -14,6 +15,8 @@ public class AssembleTeamActivity extends ActionBarActivity {
     private Player[] selected;
     private Player[] ALL_PLAYERS;
 
+    TextView questLeaderTextView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -23,6 +26,8 @@ public class AssembleTeamActivity extends ActionBarActivity {
         RND = GameState.getInstance().getRound();
         selected = new Player[TEAM_SIZE];
         ALL_PLAYERS = GameState.getInstance().getPlayers();
+        questLeaderTextView = (TextView) findViewById(R.id.quest_leader_textview);
+        questLeaderTextView.setText("The Quest Leader is " + CAPTAIN);
     }
 
 

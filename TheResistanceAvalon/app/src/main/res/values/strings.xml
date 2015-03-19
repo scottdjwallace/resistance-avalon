@@ -44,6 +44,8 @@
     <string name="title_activity_round_four">Round 4</string>
     <string name="title_activity_round_five">Round 5y</string>
     <string name="title_activity_assemble_team">Pick your Team</string>
+    <string name="questLeader">The Quest Leader is </string>
+    <string name="proposeTeam">Propose this Team</string>
 
 
 </resources>
