@@ -13,7 +13,9 @@ public class GameState {
     private int ROUND;
     private int GOOD_SCORE;
     private int BAD_SCORE;
+    private int NEXT_PLAYER;
     private Player[] players;
+    private int[][] PLAYERS_PER_ROUND;
 
     // protected constructor
     protected GameState() {
@@ -26,6 +28,8 @@ public class GameState {
         NUM_BAD_PLAYERS = 2;
         REJECTED_ROUNDS = 0;
         players = new Player[10];
+        NEXT_PLAYER = 0;
+        PLAYERS_PER_ROUND = new int[][]{{2,3,2,3,3}, {2,3,4,3,4}, {2,3,3,4,4}, {3,4,4,5,5}, {3,4,4,5,5}, {3,4,4,5,5}, }; // [num players][round]
     } // end GameState
 
     // getInstance -- singleton class
@@ -57,6 +61,7 @@ public class GameState {
     public int getRound() { return ROUND; }
     public int getBadScore() { return BAD_SCORE; }
     public int getGoodScore() { return GOOD_SCORE; }
+    public int getNumPlayersThisRound() { return PLAYERS_PER_ROUND[NUM_OF_PLAYERS][ROUND];  }
     // end accessors
 
     // sets number of player in the game
@@ -152,5 +157,16 @@ public class GameState {
         int randomNum = rand.nextInt((max - min) + 1) + min;
         return randomNum;
     } // end randInt
+
+    public Player getTeamCaptain() {
+        int i = NEXT_PLAYER;
+        if (i > NUM_OF_PLAYERS - 1) {
+            i = 0;
+            NEXT_PLAYER = 1;
+        } else {
+            NEXT_PLAYER++;
+        }
+        return players[i];
+    }
 
 } // end GameState.java
