@@ -62,7 +62,7 @@ public class GameState {
     public int getRound() { return ROUND; }
     public int getBadScore() { return BAD_SCORE; }
     public int getGoodScore() { return GOOD_SCORE; }
-    public int getNumPlayersThisRound() { return PLAYERS_PER_ROUND[NUM_OF_PLAYERS][ROUND];  }
+    public int getNumPlayersThisRound() { return PLAYERS_PER_ROUND[NUM_OF_PLAYERS - 5][ROUND]; }
     // end accessors
 
     // sets number of player in the game
