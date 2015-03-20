@@ -87,6 +87,9 @@ public class AssembleTeamActivity extends ActionBarActivity {
             layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
             layoutParams.setMargins(250, 30, 0, 0);
 
+            // ^^^ will have to switch these all to radiobuttons and then setText to the persons name
+
+            //containerLayout.addView(pTextViews[i], layoutParams);
         }
 
         // create submit button here
