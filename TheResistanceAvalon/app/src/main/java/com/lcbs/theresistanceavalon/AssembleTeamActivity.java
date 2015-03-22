@@ -1,6 +1,7 @@
 package com.lcbs.theresistanceavalon;
 
 import android.app.SearchManager;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -12,6 +13,7 @@ import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
+import android.widget.Toast;
 
 
 public class AssembleTeamActivity extends ActionBarActivity {
@@ -23,6 +25,7 @@ public class AssembleTeamActivity extends ActionBarActivity {
     private Player[] ALL_PLAYERS;
 
     TextView questLeaderTextView;
+    TextView teamSizeTextView;
     LinearLayout containerLayout;
 
     CheckBox c1;
@@ -49,6 +52,8 @@ public class AssembleTeamActivity extends ActionBarActivity {
         ALL_PLAYERS = GameState.getInstance().getPlayers();
         questLeaderTextView = (TextView) findViewById(R.id.quest_leader_textview);
         questLeaderTextView.setText("The Quest Leader is " + CAPTAIN);
+        teamSizeTextView = (TextView) findViewById(R.id.team_size_textview);
+        teamSizeTextView.setText("Please select " + TEAM_SIZE + " players");
         containerLayout = (LinearLayout)findViewById(R.id.linear2);
         listAllPlayers(ALL_PLAYERS);
     }
@@ -108,8 +113,33 @@ public class AssembleTeamActivity extends ActionBarActivity {
     }
 
     public void proposeTeam() {
-        // check radio buttons and if ok go to team voting
+        // check checkboxes and if ok go to team voting
         // else report error
+        int checked = 0;
+        int num = GameState.getInstance().getNumPlayers();
+        for (int i = 0; i < num; i++) {
+            final CheckBox checkBox = (CheckBox) findViewById(i);
+            if (checkBox.isChecked()) {
+                checked++;
+            }
+        }
+
+        if (checked == TEAM_SIZE) {
+            int j = 0;
+            for (int i = 0; i < TEAM_SIZE; i++) {
+                final CheckBox checkBox = (CheckBox) findViewById(i);
+                if (checkBox.isChecked()) {
+                    selected[j] = ALL_PLAYERS[i];
+                    j++;
+                }
+            }
+            GameState.getInstance().setTeamThisRound(selected);
+            Intent intent = new Intent(this, TeamVoteActivity.class);
+            startActivity(intent);
+        } else {
+            String message = "Please select only " + TEAM_SIZE + " players.";
+            Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
+        }
     }
 
 }

@@ -60,6 +60,10 @@
             android:name=".AssembleTeamActivity"
             android:label="@string/title_activity_assemble_team" >
         </activity>
+        <activity
+            android:name=".TeamVoteActivity"
+            android:label="@string/title_activity_team_vote" >
+        </activity>
     </application>
 
 </manifest>

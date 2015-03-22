@@ -46,6 +46,8 @@
     <string name="title_activity_assemble_team">Pick your Team</string>
     <string name="questLeader">The Quest Leader is </string>
     <string name="proposeTeam">Propose this Team</string>
+    <string name="title_activity_team_vote">TeamVoteActivity</string>
+    <string name="teamSize">Please select</string>
 
 
 </resources>
