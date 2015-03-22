@@ -1,5 +1,6 @@
 package com.lcbs.theresistanceavalon;
 
+import android.app.SearchManager;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -7,6 +8,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CheckBox;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.TextView;
@@ -23,18 +25,18 @@ public class AssembleTeamActivity extends ActionBarActivity {
     TextView questLeaderTextView;
     LinearLayout containerLayout;
 
-    // Players that can be put in the game
-    TextView p1;
-    TextView p2;
-    TextView p3;
-    TextView p4;
-    TextView p5;
-    TextView p6;
-    TextView p7;
-    TextView p8;
-    TextView p9;
-    TextView p10;
-    TextView[] pTextViews = {p1,p2,p3,p4,p5,p6,p7,p8,p9,p10};
+    CheckBox c1;
+    CheckBox c2;
+    CheckBox c3;
+    CheckBox c4;
+    CheckBox c5;
+    CheckBox c6;
+    CheckBox c7;
+    CheckBox c8;
+    CheckBox c9;
+    CheckBox c10;
+    CheckBox[] cCheckBoxes = {c1,c2,c3,c4,c5,c6,c7,c8,c9,c10};
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -77,19 +79,15 @@ public class AssembleTeamActivity extends ActionBarActivity {
     public void listAllPlayers(Player[] players) {
         int num = GameState.getInstance().getNumPlayers();
         for (int i = 0; i < num; i++) {
-            pTextViews[i] = new TextView(this);
-            containerLayout.addView(pTextViews[i]);
-            //pTextViews[i].setGravity(Gravity.CENTER_HORIZONTAL);
-            pTextViews[i].setText(players[i].getName());
-            pTextViews[i].setId(i);
+            cCheckBoxes[i] = new CheckBox(this);
+            containerLayout.addView(cCheckBoxes[i]);
+            cCheckBoxes[i].setGravity(Gravity.CENTER_HORIZONTAL);
+            cCheckBoxes[i].setText("   " + players[i].getName());
+            cCheckBoxes[i].setId(i);
 
-            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) pTextViews[i].getLayoutParams();
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) cCheckBoxes[i].getLayoutParams();
             layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
             layoutParams.setMargins(250, 30, 0, 0);
-
-            // ^^^ will have to switch these all to radiobuttons and then setText to the persons name
-
-            //containerLayout.addView(pTextViews[i], layoutParams);
         }
 
         // create submit button here
