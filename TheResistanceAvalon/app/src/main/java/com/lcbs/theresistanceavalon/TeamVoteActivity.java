@@ -43,11 +43,11 @@ public class TeamVoteActivity extends ActionBarActivity {
         players = GameState.getInstance().getPlayers();
         NUM_PLAYERS = GameState.getInstance().getNumPlayers();
         selected = GameState.getInstance().getTeamThisRound();
-        team = "The proposed team is: ";
+        team = "";
         for (int i = 0; i < TEAM_SIZE; i++) {
-            team += selected[i].getName() + " ";
+            team += selected[i].getName() + "   ";
         }
-        proposedTeamTextView = (TextView) findViewById(R.id.proposed_team_textview);
+        proposedTeamTextView = (TextView) findViewById(R.id.team_textview);
         proposedTeamTextView.setText(team);
         listPlayersToVote();
     }
@@ -76,8 +76,7 @@ public class TeamVoteActivity extends ActionBarActivity {
     }
 
     public void listPlayersToVote() {
-        // list all players then button
-        // click listener on button needs to assess
+
         // and either do an alert and decide
 
         for (int i = 0; i < NUM_PLAYERS; i++) {
@@ -106,6 +105,18 @@ public class TeamVoteActivity extends ActionBarActivity {
     }
 
     public void checkVote() {
+        int passed = 0; // people who voted to pass
+        for (int i = 0; i < NUM_PLAYERS; i++) {
+            final CheckBox checkBox = (CheckBox) findViewById(i);
+            if (checkBox.isChecked()) {
+                passed++;
+            }
+        }
 
+        if (passed > (NUM_PLAYERS/2)) {
+
+        }
+        // if passed __ num_players, else it failed
+        // else it failed
     }
 }

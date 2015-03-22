@@ -51,6 +51,7 @@
     <string name="vote">Are ok with this team?</string>
     <string name="explanation">Check the box to pass the team.</string>
     <string name="proposedTeam">The proposed team is: </string>
+    <string name="team">...</string>
 
 
 </resources>
