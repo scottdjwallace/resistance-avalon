@@ -4,8 +4,35 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:id="@+id/linear3"
     tools:context="com.lcbs.theresistanceavalon.TeamVoteActivity"
-    android:id="@+id/linear2"
     android:weightSum="1">
+
+    <TextView
+        android:id="@+id/ok_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="120dp"
+        android:text="@string/vote"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/explanation_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="20dp"
+        android:text="@string/explanation"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/proposed_team_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="20dp"
+        android:text="@string/proposedTeam"
+        android:layout_gravity="center_horizontal" />
 
 </LinearLayout>

@@ -28,17 +28,17 @@ public class AssembleTeamActivity extends ActionBarActivity {
     TextView teamSizeTextView;
     LinearLayout containerLayout;
 
-    CheckBox c1;
-    CheckBox c2;
-    CheckBox c3;
-    CheckBox c4;
-    CheckBox c5;
-    CheckBox c6;
-    CheckBox c7;
-    CheckBox c8;
-    CheckBox c9;
-    CheckBox c10;
-    CheckBox[] cCheckBoxes = {c1,c2,c3,c4,c5,c6,c7,c8,c9,c10};
+    CheckBox d1;
+    CheckBox d2;
+    CheckBox d3;
+    CheckBox d4;
+    CheckBox d5;
+    CheckBox d6;
+    CheckBox d7;
+    CheckBox d8;
+    CheckBox d9;
+    CheckBox d10;
+    CheckBox[] dCheckBoxes = {d1,d2,d3,d4,d5,d6,d7,d8,d9,d10};
 
 
     @Override
@@ -84,13 +84,13 @@ public class AssembleTeamActivity extends ActionBarActivity {
     public void listAllPlayers(Player[] players) {
         int num = GameState.getInstance().getNumPlayers();
         for (int i = 0; i < num; i++) {
-            cCheckBoxes[i] = new CheckBox(this);
-            containerLayout.addView(cCheckBoxes[i]);
-            cCheckBoxes[i].setGravity(Gravity.CENTER_HORIZONTAL);
-            cCheckBoxes[i].setText("   " + players[i].getName());
-            cCheckBoxes[i].setId(i);
+            dCheckBoxes[i] = new CheckBox(this);
+            containerLayout.addView(dCheckBoxes[i]);
+            dCheckBoxes[i].setGravity(Gravity.CENTER_HORIZONTAL);
+            dCheckBoxes[i].setText("   " + players[i].getName());
+            dCheckBoxes[i].setId(i);
 
-            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) cCheckBoxes[i].getLayoutParams();
+            LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) dCheckBoxes[i].getLayoutParams();
             layoutParams.width = LinearLayout.LayoutParams.MATCH_PARENT;
             layoutParams.setMargins(250, 30, 0, 0);
         }
