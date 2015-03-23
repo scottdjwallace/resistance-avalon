@@ -175,4 +175,11 @@ public class GameState {
     }
     public String[] getTeamThisRound() { return TEAM_THIS_ROUND; }
 
+    public boolean gameOver() {
+        if (REJECTED_ROUNDS == 5) {
+            return true;
+        }
+        return false;
+    }
+
 } // end GameState.java

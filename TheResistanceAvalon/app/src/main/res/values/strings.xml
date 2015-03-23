@@ -53,6 +53,9 @@
     <string name="proposedTeam">The proposed team is: </string>
     <string name="team">...</string>
     <string name="title_activity_game_over">GameOverActivity</string>
+    <string name="failed_message">The team has been rejected. Press OK to continue.</string>
+    <string name="failed_title">VOTE FAILED</string>
+    <string name="ok">OK</string>
 
 
 </resources>

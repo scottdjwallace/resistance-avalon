@@ -1,5 +1,8 @@
 package com.lcbs.theresistanceavalon;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -116,9 +119,32 @@ public class TeamVoteActivity extends ActionBarActivity {
 
         if (passed > (NUM_PLAYERS/2)) {
 
-        } else {
-
+        } else { // vote failed
+            GameState.getInstance().newRejectedRound();
+            open(proposedTeamTextView);
         }
 
+    }
+
+    public void open(View view){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage(R.string.failed_message);
+        alertDialogBuilder.setPositiveButton(R.string.ok,
+                new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        if (GameState.getInstance().gameOver()) {
+                            Intent intent = new Intent(getApplicationContext(), com.lcbs.theresistanceavalon.GameOverActivity.class);
+                            startActivity(intent);
+                        } else {
+                            Intent intent2 = new Intent(getApplicationContext(), com.lcbs.theresistanceavalon.AssembleTeamActivity.class);
+                            startActivity(intent2);
+                        }
+                    }
+                });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
     }
 }
