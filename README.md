@@ -14,7 +14,6 @@ Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 Tester: [Brad Guner] (https://github.com/bradguner)
 
 ### To-Do
-5. Action Bar - add logo and colour
 6. AssembleActivity CheckBox - colour
 7. TeamVoteActivity CheckBox - colour
 8. TeamVoteActivity Dialog - colour
