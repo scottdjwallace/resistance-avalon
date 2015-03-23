@@ -17,6 +17,7 @@ public class GameState {
     private Player[] players;
     private int[][] PLAYERS_PER_ROUND;
     private String[] TEAM_THIS_ROUND;
+    private String[] VOTERS_THIS_ROUND;
 
     // protected constructor
     protected GameState() {
@@ -172,8 +173,11 @@ public class GameState {
 
     public void setTeamThisRound(String[] selected) {
         TEAM_THIS_ROUND = selected;
+        //setVoters();
     }
     public String[] getTeamThisRound() { return TEAM_THIS_ROUND; }
+    public void setVoters() { VOTERS_THIS_ROUND = TEAM_THIS_ROUND;}
+    public String[] getVoters() { return VOTERS_THIS_ROUND; }
 
     public boolean gameOver() {
         if (REJECTED_ROUNDS == 5) {

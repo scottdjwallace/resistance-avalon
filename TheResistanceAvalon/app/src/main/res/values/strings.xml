@@ -52,13 +52,19 @@
     <string name="explanation">Check the box to pass the team.</string>
     <string name="proposedTeam">The proposed team is: </string>
     <string name="team">...</string>
-    <string name="title_activity_game_over">GameOverActivity</string>
+    <string name="title_activity_game_over">Game Over</string>
     <string name="failed_message">The team has been rejected. Press OK to continue.</string>
     <string name="failed_title">VOTE FAILED</string>
     <string name="passed_title">VOTE PASSED</string>
     <string name="passed_message">The team has been approved. Press OK to continue.</string>
     <string name="ok">OK</string>
-    <string name="title_activity_quest_vote">QuestVoteActivity</string>
+    <string name="title_activity_quest_vote">Vote on the Quest</string>
+    <string name="voter_explanation">Please cast your votes.</string>
+    <string name="current_voter">Current Voter: </string>
+    <string name="ready_to_vote">Ready to Vote</string>
+    <string name="vote_message">Please select your vote.</string>
+    <string name="pass">PASS</string>
+    <string name="fail">FAIL</string>
 
 
 </resources>

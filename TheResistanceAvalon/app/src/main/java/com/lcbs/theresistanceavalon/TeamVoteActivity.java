@@ -45,7 +45,6 @@ public class TeamVoteActivity extends ActionBarActivity {
         containerLayout = (LinearLayout)findViewById(R.id.linear3);
         players = GameState.getInstance().getPlayers();
         NUM_PLAYERS = GameState.getInstance().getNumPlayers();
-
         selectedPlayers = GameState.getInstance().getTeamThisRound();
         team = "";
         for (int i = 0; i < TEAM_SIZE; i++) {
@@ -118,6 +117,7 @@ public class TeamVoteActivity extends ActionBarActivity {
         }
 
         if (passed > (NUM_PLAYERS/2)) { // vote passed
+            GameState.getInstance().setTeamThisRound(selectedPlayers);
             openGood(proposedTeamTextView);
         } else { // vote failed
             GameState.getInstance().newRejectedRound();
