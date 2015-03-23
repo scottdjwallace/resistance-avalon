@@ -117,18 +117,19 @@ public class TeamVoteActivity extends ActionBarActivity {
             }
         }
 
-        if (passed > (NUM_PLAYERS/2)) {
-
+        if (passed > (NUM_PLAYERS/2)) { // vote passed
+            openGood(proposedTeamTextView);
         } else { // vote failed
             GameState.getInstance().newRejectedRound();
-            open(proposedTeamTextView);
+            openFail(proposedTeamTextView);
         }
 
     }
 
-    public void open(View view){
+    public void openFail(View view){
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage(R.string.failed_message);
+        alertDialogBuilder.setTitle(R.string.failed_title);
         alertDialogBuilder.setPositiveButton(R.string.ok,
                 new DialogInterface.OnClickListener() {
 
@@ -141,6 +142,24 @@ public class TeamVoteActivity extends ActionBarActivity {
                             Intent intent2 = new Intent(getApplicationContext(), com.lcbs.theresistanceavalon.AssembleTeamActivity.class);
                             startActivity(intent2);
                         }
+                    }
+                });
+
+        AlertDialog alertDialog = alertDialogBuilder.create();
+        alertDialog.show();
+    }
+
+    public void openGood(View view){
+        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
+        alertDialogBuilder.setMessage(R.string.passed_message);
+        alertDialogBuilder.setTitle(R.string.passed_title);
+        alertDialogBuilder.setPositiveButton(R.string.ok,
+                new DialogInterface.OnClickListener() {
+
+                    @Override
+                    public void onClick(DialogInterface arg0, int arg1) {
+                        Intent intent = new Intent(getApplicationContext(), com.lcbs.theresistanceavalon.QuestVoteActivity.class);
+                        startActivity(intent);
                     }
                 });
 

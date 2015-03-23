@@ -68,6 +68,10 @@
             android:name=".GameOverActivity"
             android:label="@string/title_activity_game_over" >
         </activity>
+        <activity
+            android:name=".QuestVoteActivity"
+            android:label="@string/title_activity_quest_vote" >
+        </activity>
     </application>
 
 </manifest>
