@@ -135,7 +135,6 @@ public class AssembleTeamActivity extends ActionBarActivity {
                 }
             }
             GameState.getInstance().setTeamThisRound(selected);
-            GameState.getInstance().setVoters();
             Intent intent = new Intent(this, TeamVoteActivity.class);
             startActivity(intent);
         } else {

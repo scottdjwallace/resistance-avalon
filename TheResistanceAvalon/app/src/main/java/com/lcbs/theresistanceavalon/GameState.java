@@ -1,5 +1,8 @@
 package com.lcbs.theresistanceavalon;
 
+import android.content.Context;
+
+import java.io.FileOutputStream;
 import java.util.Random;
 
 public class GameState {
@@ -16,8 +19,7 @@ public class GameState {
     private int NEXT_PLAYER;
     private Player[] players;
     private int[][] PLAYERS_PER_ROUND;
-    private String[] TEAM_THIS_ROUND;
-    private String[] VOTERS_THIS_ROUND;
+    public static String[] TEAM_THIS_ROUND;
 
     // protected constructor
     protected GameState() {
@@ -31,6 +33,7 @@ public class GameState {
         REJECTED_ROUNDS = 0;
         players = new Player[10];
         NEXT_PLAYER = 0;
+        TEAM_THIS_ROUND = new String[10];
         PLAYERS_PER_ROUND = new int[][]{{2,3,2,3,3}, {2,3,4,3,4}, {2,3,3,4,4}, {3,4,4,5,5}, {3,4,4,5,5}, {3,4,4,5,5}, }; // [num players][round]
     } // end GameState
 
@@ -173,11 +176,8 @@ public class GameState {
 
     public void setTeamThisRound(String[] selected) {
         TEAM_THIS_ROUND = selected;
-        //setVoters();
     }
     public String[] getTeamThisRound() { return TEAM_THIS_ROUND; }
-    public void setVoters() { VOTERS_THIS_ROUND = TEAM_THIS_ROUND;}
-    public String[] getVoters() { return VOTERS_THIS_ROUND; }
 
     public boolean gameOver() {
         if (REJECTED_ROUNDS == 5) {

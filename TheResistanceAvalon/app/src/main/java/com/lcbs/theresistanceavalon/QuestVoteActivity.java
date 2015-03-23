@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -15,7 +16,6 @@ public class QuestVoteActivity extends ActionBarActivity {
 
     TextView currentVoterTextView;
     private int NUM_VOTERS;
-    private String[] VOTERS;
     private int voteInc;
     private String currentVoter;
     private int passed;
@@ -25,9 +25,8 @@ public class QuestVoteActivity extends ActionBarActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_quest_vote);
-        //VOTERS = GameState.getInstance().getTeamThisRound(); // getting null array here
         NUM_VOTERS = GameState.getInstance().getNumPlayersThisRound();
-        currentVoterTextView = (TextView) findViewById(R.id.team_textview);
+        currentVoterTextView = (TextView) findViewById(R.id.current_voter_textview);
         voteInc = 0;
         passed = 0;
         failed = 0;
@@ -68,8 +67,14 @@ public class QuestVoteActivity extends ActionBarActivity {
                 openPassed(currentVoterTextView);
             }
         } else {
-            //currentVoter = "Current voter is: " + VOTERS[0];
-            //currentVoterTextView.setText(currentVoter);
+            String voter = GameState.getInstance().TEAM_THIS_ROUND[voteInc];
+            Log.e("error",voter);
+            if (voter != null) {
+                currentVoter = voter;
+            } else { // null here
+                currentVoter = "Current Voter is: " + voteInc;
+            }
+            currentVoterTextView.setText(currentVoter);
 
         }
         voteInc++;
@@ -79,8 +84,7 @@ public class QuestVoteActivity extends ActionBarActivity {
 
     // opens vote alert on button click
     public void openVote(View v){
-        //String title = currentVoter;
-        String title = "Voter Name";
+        String title = currentVoter;
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage(R.string.vote_message);
