@@ -38,7 +38,7 @@ public class InstructionsActivity extends ActionBarActivity {
         ArrayAdapter mArrayAdapter;
         ArrayList mNameList = new ArrayList();
         stepsListView = (ListView) findViewById(R.id.steps_listview);
-        mArrayAdapter = new ArrayAdapter(this, android.R.layout.simple_list_item_1, stepsList);
+        mArrayAdapter = new ArrayAdapter(this, R.layout.list_colour_item,R.id.list_content, stepsList);
         stepsListView.setAdapter(mArrayAdapter);
     }
 
