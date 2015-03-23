@@ -68,7 +68,6 @@ public class QuestVoteActivity extends ActionBarActivity {
             }
         } else {
             String voter = GameState.getInstance().TEAM_THIS_ROUND[voteInc];
-            Log.e("error",voter);
             if (voter != null) {
                 currentVoter = voter;
             } else { // null here
@@ -126,6 +125,10 @@ public class QuestVoteActivity extends ActionBarActivity {
                     public void onClick(DialogInterface arg0, int arg1) {
                         GameState.getInstance().newRound();
                         GameState.getInstance().roundWin("evil");
+                        if (GameState.getInstance().getRound() > 5 || GameState.getInstance().getBadScore() == 3 || GameState.getInstance().getGoodScore() == 3){
+                            Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                            startActivity(intent);
+                        }
                         Intent intent = new Intent(getApplicationContext(), RoundSummaryActivity.class);
                         startActivity(intent);
                     }
@@ -149,6 +152,10 @@ public class QuestVoteActivity extends ActionBarActivity {
                     public void onClick(DialogInterface arg0, int arg1) {
                         GameState.getInstance().newRound();
                         GameState.getInstance().roundWin("good");
+                        if (GameState.getInstance().getRound() > 5 || GameState.getInstance().getBadScore() == 3 || GameState.getInstance().getGoodScore() == 3){
+                            Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
+                            startActivity(intent);
+                        }
                         Intent intent = new Intent(getApplicationContext(), RoundSummaryActivity.class);
                         startActivity(intent);
                     }

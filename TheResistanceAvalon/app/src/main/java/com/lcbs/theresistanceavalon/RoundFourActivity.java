@@ -46,7 +46,7 @@ public class RoundFourActivity extends ActionBarActivity implements View.OnClick
 
     @Override
     public void onClick(View v) {
-        Intent intent = new Intent(this, RoundFiveActivity.class); // next activity
+        Intent intent = new Intent(this, AssembleTeamActivity.class); // next activity
         startActivity(intent);
     }
 }

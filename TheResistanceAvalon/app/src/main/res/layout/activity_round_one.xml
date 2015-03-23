@@ -23,7 +23,7 @@
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="140dp"
-        android:text="@string/beginRound"/>
+        android:text="@string/nextRound"/>
 
 </LinearLayout>
 

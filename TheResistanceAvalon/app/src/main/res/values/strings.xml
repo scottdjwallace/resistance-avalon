@@ -65,6 +65,8 @@
     <string name="vote_message">Please select your vote.</string>
     <string name="pass">PASS</string>
     <string name="fail">FAIL</string>
+    <string name="round">Round Over</string>
+    <string name="nextRound">Next Round</string>
 
 
 </resources>

@@ -9,9 +9,39 @@
 
 
     <TextView
+        android:id="@+id/round_number_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="New Text"
-        android:id="@+id/textView"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="200dp"
+        android:text="@string/round"
         android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/good_score_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="100dp"
+        android:text="@string/round"
+        android:layout_gravity="center_horizontal" />
+
+    <TextView
+        android:id="@+id/bad_score_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="20dp"
+        android:text="@string/round"
+        android:layout_gravity="center_horizontal" />
+
+    <Button
+        android:id="@+id/next_round_button"
+        android:layout_width="200dp"
+        android:layout_height="80dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="100dp"
+        android:onClick="nextRound"
+        android:text="@string/beginRound"/>
+
 </LinearLayout>
