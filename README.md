@@ -14,8 +14,7 @@ Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 Tester: [Brad Guner] (https://github.com/bradguner)
 
 ### To-Do
-1. Change ListView colours 
-2. Change CheckBox colours
-3. Change Programmically created buttons and TextViews
-4. Double check everything lines up 
-5. Change ActionBar Stuff
+1. Change CheckBox colours
+2. Change Programmically created buttons and TextViews
+3. Double check everything lines up 
+4. Change ActionBar Stuff

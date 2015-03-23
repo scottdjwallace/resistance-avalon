@@ -58,12 +58,14 @@ public class EnterPlayerNames extends ActionBarActivity {
             layoutParams.setMargins(30, 20, 30, 0);
             editTexts[i-1].setLayoutParams(layoutParams);
             editTexts[i-1].setHint("Player " + i + "\'s Name");
-            editTexts[i-1].setHintTextColor(Color.BLACK); // change these later
-            editTexts[i-1].setTextColor(Color.BLACK); // change these later
+            editTexts[i-1].setHintTextColor(Color.parseColor("#c5a495"));
+            editTexts[i-1].setTextColor(Color.parseColor("#c5a495"));
         }
         // create submit button here
         final Button submitButton = new Button(this);
         submitButton.setText("Submit");
+        submitButton.setBackgroundColor(Color.parseColor("#f3d28f"));
+        submitButton.setTextColor(Color.parseColor("#433022"));
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         lp.setMargins(15,15,15,15); // left, top, right, bottom
         submitButton.setWidth(200);

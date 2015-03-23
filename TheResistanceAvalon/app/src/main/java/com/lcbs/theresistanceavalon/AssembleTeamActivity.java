@@ -2,6 +2,7 @@ package com.lcbs.theresistanceavalon;
 
 import android.app.SearchManager;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -88,6 +89,7 @@ public class AssembleTeamActivity extends ActionBarActivity {
             containerLayout.addView(dCheckBoxes[i]);
             dCheckBoxes[i].setGravity(Gravity.CENTER_HORIZONTAL);
             dCheckBoxes[i].setText("   " + players[i].getName());
+            dCheckBoxes[i].setTextColor(Color.parseColor("#c5a495"));
             dCheckBoxes[i].setId(i);
 
             LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) dCheckBoxes[i].getLayoutParams();
@@ -102,6 +104,8 @@ public class AssembleTeamActivity extends ActionBarActivity {
         lp.setMargins(250,60,250,0); // left, top, right, bottom
         //submitButton.setWidth(200);
         //submitButton.setHeight(80);
+        submitButton.setBackgroundColor(Color.parseColor("#f3d28f"));
+        submitButton.setTextColor(Color.parseColor("#433022"));
         submitButton.setGravity(Gravity.CENTER_HORIZONTAL);
         containerLayout.addView(submitButton, lp);
         submitButton.setOnClickListener(new View.OnClickListener() {

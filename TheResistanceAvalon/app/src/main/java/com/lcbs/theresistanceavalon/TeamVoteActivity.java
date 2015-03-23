@@ -3,6 +3,7 @@ package com.lcbs.theresistanceavalon;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.graphics.Color;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -87,6 +88,7 @@ public class TeamVoteActivity extends ActionBarActivity {
             containerLayout.addView(cCheckBoxes[i]);
             cCheckBoxes[i].setGravity(Gravity.CENTER_HORIZONTAL);
             cCheckBoxes[i].setText("   " + players[i].getName());
+            cCheckBoxes[i].setTextColor(Color.parseColor("#c5a495"));
             cCheckBoxes[i].setId(i);
 
             LinearLayout.LayoutParams layoutParams = (LinearLayout.LayoutParams) cCheckBoxes[i].getLayoutParams();
@@ -96,6 +98,8 @@ public class TeamVoteActivity extends ActionBarActivity {
 
         final Button submitButton = new Button(this);
         submitButton.setText("Vote");
+        submitButton.setBackgroundColor(Color.parseColor("#f3d28f"));
+        submitButton.setTextColor(Color.parseColor("#433022"));
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
         lp.setMargins(250,60,250,0); // left, top, right, bottom
         submitButton.setGravity(Gravity.CENTER_HORIZONTAL);
