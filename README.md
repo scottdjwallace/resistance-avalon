@@ -14,7 +14,9 @@ Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 Tester: [Brad Guner] (https://github.com/bradguner)
 
 ### To-Do
-1. Change CheckBox colours
-2. Change Programmically created buttons and TextViews
-3. Double check everything lines up 
-4. Change ActionBar Stuff
+4. Double check everything lines up 
+5. Action Bar - add logo and colour
+6. AssembleActivity CheckBox - colour
+7. TeamVoteActivity CheckBox - colour
+8. TeamVoteActivity Dialog - colour
+9. QuestVoteActivity Dialog - colour
