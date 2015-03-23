@@ -126,7 +126,8 @@ public class AssembleTeamActivity extends ActionBarActivity {
 
         if (checked == TEAM_SIZE) {
             int j = 0;
-            for (int i = 0; i < TEAM_SIZE; i++) {
+            int num2 = GameState.getInstance().getNumPlayers();
+            for (int i = 0; i < num2; i++) {
                 final CheckBox checkBox = (CheckBox) findViewById(i);
                 if (checkBox.isChecked()) {
                     selected[j] = ALL_PLAYERS[i].getName();
