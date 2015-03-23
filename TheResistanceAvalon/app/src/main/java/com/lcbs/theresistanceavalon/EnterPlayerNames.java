@@ -67,8 +67,7 @@ public class EnterPlayerNames extends ActionBarActivity {
         submitButton.setBackgroundColor(Color.parseColor("#f3d28f"));
         submitButton.setTextColor(Color.parseColor("#433022"));
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(15,15,15,15); // left, top, right, bottom
-        submitButton.setWidth(200);
+        lp.setMargins(250,20,250,0); // left, top, right, bottom
         submitButton.setGravity(Gravity.CENTER_HORIZONTAL);
         containerLayout.addView(submitButton, lp);
         submitButton.setOnClickListener(new View.OnClickListener() {

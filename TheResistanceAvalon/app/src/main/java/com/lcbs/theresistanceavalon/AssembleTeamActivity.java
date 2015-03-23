@@ -101,7 +101,7 @@ public class AssembleTeamActivity extends ActionBarActivity {
         final Button submitButton = new Button(this);
         submitButton.setText("Propose This Team");
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(250,60,250,0); // left, top, right, bottom
+        lp.setMargins(250,20,250,0); // left, top, right, bottom
         //submitButton.setWidth(200);
         //submitButton.setHeight(80);
         submitButton.setBackgroundColor(Color.parseColor("#f3d28f"));

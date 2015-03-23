@@ -101,7 +101,7 @@ public class TeamVoteActivity extends ActionBarActivity {
         submitButton.setBackgroundColor(Color.parseColor("#f3d28f"));
         submitButton.setTextColor(Color.parseColor("#433022"));
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(250,60,250,0); // left, top, right, bottom
+        lp.setMargins(250,20,250,0); // left, top, right, bottom
         submitButton.setGravity(Gravity.CENTER_HORIZONTAL);
         containerLayout.addView(submitButton, lp);
         submitButton.setOnClickListener(new View.OnClickListener() {

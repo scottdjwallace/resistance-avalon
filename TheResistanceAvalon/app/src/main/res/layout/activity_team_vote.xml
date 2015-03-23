@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_marginTop="100dp"
+        android:layout_marginTop="70dp"
         android:text="@string/proposedTeam"
         android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
@@ -24,7 +24,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/team"
         android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
@@ -34,7 +34,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:text="@string/explanation"
         android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
