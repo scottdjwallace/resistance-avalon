@@ -137,7 +137,7 @@ public class AssembleTeamActivity extends ActionBarActivity {
             Intent intent = new Intent(this, TeamVoteActivity.class);
             startActivity(intent);
         } else {
-            String message = "Please select only " + TEAM_SIZE + " players.";
+            String message = "Please select " + TEAM_SIZE + " players.";
             Toast.makeText(this, message, Toast.LENGTH_SHORT).show();
         }
     }

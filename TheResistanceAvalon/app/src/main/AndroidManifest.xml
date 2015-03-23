@@ -64,6 +64,10 @@
             android:name=".TeamVoteActivity"
             android:label="@string/title_activity_team_vote" >
         </activity>
+        <activity
+            android:name=".GameOverActivity"
+            android:label="@string/title_activity_game_over" >
+        </activity>
     </application>
 
 </manifest>

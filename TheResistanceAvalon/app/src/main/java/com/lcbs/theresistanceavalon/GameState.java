@@ -14,7 +14,7 @@ public class GameState {
     private int GOOD_SCORE;
     private int BAD_SCORE;
     private int NEXT_PLAYER;
-    private Player[] players;
+    private Player[] PLAYERS;
     private int[][] PLAYERS_PER_ROUND;
     private Player[] TEAM_THIS_ROUND;
 
@@ -28,7 +28,7 @@ public class GameState {
         NUM_GOOD_PLAYERS = 3;
         NUM_BAD_PLAYERS = 2;
         REJECTED_ROUNDS = 0;
-        players = new Player[10];
+        PLAYERS = new Player[10];
         NEXT_PLAYER = 0;
         PLAYERS_PER_ROUND = new int[][]{{2,3,2,3,3}, {2,3,4,3,4}, {2,3,3,4,4}, {3,4,4,5,5}, {3,4,4,5,5}, {3,4,4,5,5}, }; // [num players][round]
     } // end GameState
@@ -48,7 +48,7 @@ public class GameState {
         NUM_GOOD_PLAYERS = 3;
         NUM_BAD_PLAYERS = 2;
         REJECTED_ROUNDS = 0;
-        players = new Player[10];
+        PLAYERS = new Player[10];
     } // end resetGame
 
     // accessors for private variables
@@ -57,7 +57,7 @@ public class GameState {
     }
     public int getNumGoodPlayers() { return NUM_GOOD_PLAYERS; }
     public int getNumBadPlayers() { return NUM_BAD_PLAYERS; }
-    public Player[] getPlayers() { return players; }
+    public Player[] getPlayers() { return PLAYERS; }
     public int getRejectedRounds() { return REJECTED_ROUNDS; }
     public int getRound() { return ROUND; }
     public int getBadScore() { return BAD_SCORE; }
@@ -148,7 +148,7 @@ public class GameState {
                 motive = 0;
                 bad++;
             }
-            players[i] = new Player(names[i], motive);
+            PLAYERS[i] = new Player(names[i], motive);
         }
     } // end createPlayers
 
@@ -167,12 +167,25 @@ public class GameState {
         } else {
             NEXT_PLAYER++;
         }
-        return players[i].getName();
+        return PLAYERS[i].getName();
     }
 
     public void setTeamThisRound(Player[] selected) {
         TEAM_THIS_ROUND = selected;
     }
     public Player[] getTeamThisRound() { return TEAM_THIS_ROUND; }
+
+    // test if game is over
+    public boolean gameOver() {
+        if (REJECTED_ROUNDS == 5) {
+            return true;
+        }
+        return false;
+    }
+
+    public static void resetSelected() {
+        Player[] empty = {};
+        GameState.getInstance().setTeamThisRound(empty);
+    }
 
 } // end GameState.java

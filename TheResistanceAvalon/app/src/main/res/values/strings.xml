@@ -52,6 +52,10 @@
     <string name="explanation">Check the box to pass the team.</string>
     <string name="proposedTeam">The proposed team is: </string>
     <string name="team">...</string>
+    <string name="failed_title">VOTE FAILED</string>
+    <string name="failed_message">The proposed team was rejected. Press OK to proceed.</string>
+    <string name="ok">OK</string>
+    <string name="title_activity_game_over">GameOverActivity</string>
 
 
 </resources>
