@@ -9,20 +9,11 @@
     android:weightSum="1">
 
     <TextView
-        android:id="@+id/ok_textview"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_marginTop="100dp"
-        android:text="@string/vote"
-        android:layout_gravity="center_horizontal" />
-
-    <TextView
         android:id="@+id/proposed_team_textview"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceLarge"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="100dp"
         android:text="@string/proposedTeam"
         android:layout_gravity="center_horizontal" />
 
