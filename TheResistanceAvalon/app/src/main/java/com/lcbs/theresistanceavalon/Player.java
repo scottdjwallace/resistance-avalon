@@ -10,13 +10,7 @@ public class Player {
         this.motive = motive;
     }
 
-    public String getName() {
-        if (name != null) {
-            return name;
-        }
-        return "null";
-    }
-
+    public String getName() { return name; }
     public String getMotive() {
         if (motive == 1) return "Good";
         return "Evil";

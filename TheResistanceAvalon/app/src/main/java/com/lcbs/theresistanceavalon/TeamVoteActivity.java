@@ -1,8 +1,5 @@
 package com.lcbs.theresistanceavalon;
 
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.view.Gravity;
@@ -18,7 +15,7 @@ import android.widget.TextView;
 public class TeamVoteActivity extends ActionBarActivity {
 
     TextView proposedTeamTextView;
-    private Player[] selectedPlayers;
+    private Player[] selected;
     private Player[] players;
     private String team;
     private int TEAM_SIZE;
@@ -45,10 +42,10 @@ public class TeamVoteActivity extends ActionBarActivity {
         containerLayout = (LinearLayout)findViewById(R.id.linear3);
         players = GameState.getInstance().getPlayers();
         NUM_PLAYERS = GameState.getInstance().getNumPlayers();
-        selectedPlayers = GameState.getInstance().getTeamThisRound();
+        selected = GameState.getInstance().getTeamThisRound();
         team = "";
         for (int i = 0; i < TEAM_SIZE; i++) {
-            team += selectedPlayers[i].getName() + "   ";
+            team += selected[i].getName() + "   ";
         }
         proposedTeamTextView = (TextView) findViewById(R.id.team_textview);
         proposedTeamTextView.setText(team);
@@ -116,37 +113,10 @@ public class TeamVoteActivity extends ActionBarActivity {
             }
         }
 
-        // if  - passed, else - failed
         if (passed > (NUM_PLAYERS/2)) {
 
-        } else {
-            GameState.getInstance().newRejectedRound();
-            GameState.getInstance().resetSelected();
-            open(proposedTeamTextView);
         }
+        // if passed __ num_players, else it failed
+        // else it failed
     }
-
-
-    public void open(View view){
-        AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage(R.string.failed_message);
-        alertDialogBuilder.setPositiveButton(R.string.ok,
-                new DialogInterface.OnClickListener() {
-
-                    @Override
-                    public void onClick(DialogInterface arg0, int arg1) {
-                        if (GameState.getInstance().gameOver()) {
-                            Intent intent = new Intent(getApplicationContext(), com.lcbs.theresistanceavalon.GameOverActivity.class);
-                            startActivity(intent);
-                        } else {
-                            Intent intent2 = new Intent(getApplicationContext(), com.lcbs.theresistanceavalon.AssembleTeamActivity.class);
-                            startActivity(intent2);
-                        }
-                    }
-                });
-
-        AlertDialog alertDialog = alertDialogBuilder.create();
-        alertDialog.show();
-    }
-
 }
