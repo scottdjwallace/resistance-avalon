@@ -45,14 +45,7 @@ public class GameState {
 
     // Resets entire game
     public void resetGame() {
-        ROUND = 1;
-        GOOD_SCORE = 0;
-        BAD_SCORE = 0;
-        NUM_OF_PLAYERS = 5;
-        NUM_GOOD_PLAYERS = 3;
-        NUM_BAD_PLAYERS = 2;
-        REJECTED_ROUNDS = 0;
-        players = new Player[10];
+        instance = null;
     } // end resetGame
 
     // accessors for private variables

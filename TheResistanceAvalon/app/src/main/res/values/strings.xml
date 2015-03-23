@@ -67,6 +67,9 @@
     <string name="fail">FAIL</string>
     <string name="round">Round Over</string>
     <string name="nextRound">Next Round</string>
+    <string name="gameOver">GAME OVER</string>
+    <string name="winners">The have won!</string>
+    <string name="mainMenu">Main Menu</string>
 
 
 </resources>
