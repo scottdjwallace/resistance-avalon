@@ -66,7 +66,7 @@ public class GameState {
     public int getRound() { return ROUND; }
     public int getBadScore() { return BAD_SCORE; }
     public int getGoodScore() { return GOOD_SCORE; }
-    public int getNumPlayersThisRound() { return PLAYERS_PER_ROUND[NUM_OF_PLAYERS - 5][ROUND]; }
+    public int getNumPlayersThisRound() { return PLAYERS_PER_ROUND[NUM_OF_PLAYERS - 5][ROUND - 1]; }
     // end accessors
 
     // sets number of player in the game
@@ -181,6 +181,12 @@ public class GameState {
 
     public boolean gameOver() {
         if (REJECTED_ROUNDS == 5) {
+            return true;
+        }
+        if (GOOD_SCORE == 3) {
+            return true;
+        }
+        if (BAD_SCORE == 3){
             return true;
         }
         return false;

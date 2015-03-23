@@ -125,12 +125,14 @@ public class QuestVoteActivity extends ActionBarActivity {
                     public void onClick(DialogInterface arg0, int arg1) {
                         GameState.getInstance().newRound();
                         GameState.getInstance().roundWin("evil");
-                        if (GameState.getInstance().getRound() > 5 || GameState.getInstance().getBadScore() == 3 || GameState.getInstance().getGoodScore() == 3){
+                        if (GameState.getInstance().gameOver()){
                             Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                             startActivity(intent);
+                        } else {
+                            Intent intent = new Intent(getApplicationContext(), RoundSummaryActivity.class);
+                            startActivity(intent);
                         }
-                        Intent intent = new Intent(getApplicationContext(), RoundSummaryActivity.class);
-                        startActivity(intent);
+
                     }
                 });
 
@@ -152,12 +154,14 @@ public class QuestVoteActivity extends ActionBarActivity {
                     public void onClick(DialogInterface arg0, int arg1) {
                         GameState.getInstance().newRound();
                         GameState.getInstance().roundWin("good");
-                        if (GameState.getInstance().getRound() > 5 || GameState.getInstance().getBadScore() == 3 || GameState.getInstance().getGoodScore() == 3){
+                        if (GameState.getInstance().gameOver()){
                             Intent intent = new Intent(getApplicationContext(), GameOverActivity.class);
                             startActivity(intent);
+                        } else {
+                            Intent intent = new Intent(getApplicationContext(), RoundSummaryActivity.class);
+                            startActivity(intent);
                         }
-                        Intent intent = new Intent(getApplicationContext(), RoundSummaryActivity.class);
-                        startActivity(intent);
+
                     }
                 });
 
