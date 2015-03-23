@@ -21,7 +21,7 @@ public class AssembleTeamActivity extends ActionBarActivity {
     private String CAPTAIN;
     private int TEAM_SIZE;
     private int RND;
-    private Player[] selected;
+    private String[] selected;
     private Player[] ALL_PLAYERS;
 
     TextView questLeaderTextView;
@@ -48,7 +48,7 @@ public class AssembleTeamActivity extends ActionBarActivity {
         CAPTAIN = GameState.getInstance().getTeamCaptain();
         TEAM_SIZE = GameState.getInstance().getNumPlayersThisRound();
         RND = GameState.getInstance().getRound();
-        selected = new Player[TEAM_SIZE];
+        selected = new String[TEAM_SIZE];
         ALL_PLAYERS = GameState.getInstance().getPlayers();
         questLeaderTextView = (TextView) findViewById(R.id.quest_leader_textview);
         questLeaderTextView.setText("The Quest Leader is " + CAPTAIN);
@@ -129,7 +129,7 @@ public class AssembleTeamActivity extends ActionBarActivity {
             for (int i = 0; i < TEAM_SIZE; i++) {
                 final CheckBox checkBox = (CheckBox) findViewById(i);
                 if (checkBox.isChecked()) {
-                    selected[j] = ALL_PLAYERS[i];
+                    selected[j] = ALL_PLAYERS[i].getName();
                     j++;
                 }
             }

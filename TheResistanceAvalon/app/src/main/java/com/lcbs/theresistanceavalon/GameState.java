@@ -16,7 +16,7 @@ public class GameState {
     private int NEXT_PLAYER;
     private Player[] players;
     private int[][] PLAYERS_PER_ROUND;
-    private Player[] TEAM_THIS_ROUND;
+    private String[] TEAM_THIS_ROUND;
 
     // protected constructor
     protected GameState() {
@@ -170,9 +170,9 @@ public class GameState {
         return players[i].getName();
     }
 
-    public void setTeamThisRound(Player[] selected) {
+    public void setTeamThisRound(String[] selected) {
         TEAM_THIS_ROUND = selected;
     }
-    public Player[] getTeamThisRound() { return TEAM_THIS_ROUND; }
+    public String[] getTeamThisRound() { return TEAM_THIS_ROUND; }
 
 } // end GameState.java

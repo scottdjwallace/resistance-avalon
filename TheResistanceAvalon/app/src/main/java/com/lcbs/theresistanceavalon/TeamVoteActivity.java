@@ -15,7 +15,7 @@ import android.widget.TextView;
 public class TeamVoteActivity extends ActionBarActivity {
 
     TextView proposedTeamTextView;
-    private Player[] selected;
+    private String[] selectedPlayers;
     private Player[] players;
     private String team;
     private int TEAM_SIZE;
@@ -42,10 +42,11 @@ public class TeamVoteActivity extends ActionBarActivity {
         containerLayout = (LinearLayout)findViewById(R.id.linear3);
         players = GameState.getInstance().getPlayers();
         NUM_PLAYERS = GameState.getInstance().getNumPlayers();
-        selected = GameState.getInstance().getTeamThisRound();
+
+        selectedPlayers = GameState.getInstance().getTeamThisRound();
         team = "";
         for (int i = 0; i < TEAM_SIZE; i++) {
-            team += selected[i].getName() + "   ";
+            team += selectedPlayers[i] + "   ";
         }
         proposedTeamTextView = (TextView) findViewById(R.id.team_textview);
         proposedTeamTextView.setText(team);
