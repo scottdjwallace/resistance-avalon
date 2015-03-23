@@ -115,8 +115,9 @@ public class TeamVoteActivity extends ActionBarActivity {
 
         if (passed > (NUM_PLAYERS/2)) {
 
+        } else {
+
         }
-        // if passed __ num_players, else it failed
-        // else it failed
+
     }
 }

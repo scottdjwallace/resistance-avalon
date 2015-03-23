@@ -52,6 +52,7 @@
     <string name="explanation">Check the box to pass the team.</string>
     <string name="proposedTeam">The proposed team is: </string>
     <string name="team">...</string>
+    <string name="title_activity_game_over">GameOverActivity</string>
 
 
 </resources>
