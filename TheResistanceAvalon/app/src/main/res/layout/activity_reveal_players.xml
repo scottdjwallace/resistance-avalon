@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.lcbs.theresistanceavalon.RevealPlayersActivity"
+    android:background="@drawable/background1"
     android:weightSum="1">
 
     <TextView
@@ -14,6 +15,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginTop="180dp"
         android:text="@string/nameHolder"
+        android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
     <TextView
@@ -23,6 +25,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginTop="40dp"
         android:text="@string/motiveHolder"
+        android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
     <Button
@@ -31,6 +34,8 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
+        android:background="#f3d28f"
+        android:textColor="#433022"
         android:text="@string/ready"/>
 
 

@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.lcbs.theresistanceavalon.RoundTwoActivity"
+    android:background="@drawable/background1"
     android:weightSum="1">
 
     <TextView
@@ -15,6 +16,7 @@
         android:layout_marginTop="240dp"
         android:textSize="50dp"
         android:text="@string/roundTwo"
+        android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
     <Button
@@ -23,6 +25,8 @@
         android:layout_height="80dp"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="140dp"
+        android:background="#f3d28f"
+        android:textColor="#433022"
         android:text="@string/beginRound"/>
 
 </LinearLayout>

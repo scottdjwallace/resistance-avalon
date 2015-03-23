@@ -6,6 +6,7 @@
     android:orientation="vertical"
     tools:context="com.lcbs.theresistanceavalon.QuestVoteActivity"
     android:id="@+id/linear4"
+    android:background="@drawable/background1"
     android:weightSum="1">
 
     <TextView
@@ -15,6 +16,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginTop="200dp"
         android:text="@string/voter_explanation"
+        android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
     <TextView
@@ -24,6 +26,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginTop="20dp"
         android:text="@string/current_voter"
+        android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
     <Button
@@ -33,6 +36,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         android:onClick="openVote"
+        android:background="#f3d28f"
+        android:textColor="#433022"
         android:text="@string/ready_to_vote"/>
 
 </LinearLayout>

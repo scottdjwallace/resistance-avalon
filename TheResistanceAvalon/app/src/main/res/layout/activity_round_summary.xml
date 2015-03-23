@@ -5,6 +5,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     tools:context="com.lcbs.theresistanceavalon.RoundSummaryActivity"
+    android:background="@drawable/background1"
     android:weightSum="1">
 
 
@@ -15,6 +16,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginTop="200dp"
         android:text="@string/round"
+        android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
     <TextView
@@ -24,6 +26,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginTop="100dp"
         android:text="@string/round"
+        android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
     <TextView
@@ -33,6 +36,7 @@
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_marginTop="20dp"
         android:text="@string/round"
+        android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
     <Button
@@ -42,6 +46,8 @@
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="100dp"
         android:onClick="nextRound"
+        android:background="#f3d28f"
+        android:textColor="#433022"
         android:text="@string/beginRound"/>
 
 </LinearLayout>
