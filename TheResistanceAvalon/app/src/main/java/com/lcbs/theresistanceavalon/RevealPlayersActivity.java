@@ -14,6 +14,7 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
 
     TextView nameTextView;
     TextView motiveTextView;
+    TextView evilPlayersTextView;
     Button readyButton;
     private int counter;
     private Player[] plyrs;
@@ -29,8 +30,10 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
         readyButton.setOnClickListener(this);
         nameTextView = (TextView) findViewById(R.id.player_name_textview);
         motiveTextView = (TextView) findViewById(R.id.player_motive_textview);
+        evilPlayersTextView = (TextView) findViewById(R.id.evil_players_textview);
         plyrs = GameState.getInstance().getPlayers();
         nameTextView.setText(plyrs[counter].getName());
+        evilPlayersTextView.setText("");
         counter = 0;
         reveal = true;
         doneRevealing = false;
@@ -73,12 +76,17 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
             // reveal player
             motiveTextView.setText("You are " + plyrs[counter].getMotive());
             readyButton.setText("Next Player");
+            if (plyrs[counter].getMotive() == "Evil"){
+                String evil = GameState.getInstance().listEvilPlayers(plyrs[counter]);
+                evilPlayersTextView.setText("Other Evil Players: " + evil);
+            }
             if (counter == num - 1) { readyButton.setText("Start Questing"); doneRevealing = true; }
             counter++;
         } else {
             //ready next player
             nameTextView.setText(plyrs[counter].getName());
             motiveTextView.setText("You are ...");
+            evilPlayersTextView.setText("");
             readyButton.setText("Ready to Reveal");
         }
         reveal = !reveal;

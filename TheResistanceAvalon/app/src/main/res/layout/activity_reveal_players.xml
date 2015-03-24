@@ -28,6 +28,16 @@
         android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
+    <TextView
+        android:id="@+id/evil_players_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="40dp"
+        android:text="@string/motiveHolder"
+        android:textColor="#C5A495"
+        android:layout_gravity="center_horizontal" />
+
     <Button
         android:id="@+id/ready_button"
         android:layout_width="200dp"
