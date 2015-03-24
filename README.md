@@ -16,5 +16,3 @@ Tester: [Brad Guner] (https://github.com/bradguner)
 ### To-Do
 6. AssembleActivity CheckBox - colour
 7. TeamVoteActivity CheckBox - colour
-8. TeamVoteActivity Dialog - colour
-9. QuestVoteActivity Dialog - colour
