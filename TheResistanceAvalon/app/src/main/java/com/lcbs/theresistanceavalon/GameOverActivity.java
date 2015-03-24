@@ -21,7 +21,7 @@ public class GameOverActivity extends ActionBarActivity {
         if (GameState.getInstance().getGoodScore() == 3){
             winnersTextView.setText("King Arthur\'s Servants are victorious!\n\nPeace has spread through the land");
         } else {
-            winnersTextView.setText("Evil has triumphed.\n\nFear has spread across the land");
+            winnersTextView.setText("Evil has triumphed!\n\nFear has spread across the land");
         }
     }
 

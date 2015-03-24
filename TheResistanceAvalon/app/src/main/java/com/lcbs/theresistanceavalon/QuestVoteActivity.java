@@ -86,7 +86,7 @@ public class QuestVoteActivity extends ActionBarActivity {
         String title = currentVoter;
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
-        alertDialogBuilder.setMessage(R.string.vote_message);
+        alertDialogBuilder.setMessage("Please enter your vote.\n\nNote: Good players should always Pass a quest.");
         alertDialogBuilder.setTitle(title);
         alertDialogBuilder.setPositiveButton(R.string.pass,
                 new DialogInterface.OnClickListener() {
