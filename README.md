@@ -13,6 +13,7 @@ Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 
 Tester: [Brad Guner] (https://github.com/bradguner)
 
-### To-Do
-6. AssembleActivity CheckBox - colour
-7. TeamVoteActivity CheckBox - colour
+### Next Steps
+- Customized Dialogs
+- Customized Check Boxes
+- Customized Action Bar
