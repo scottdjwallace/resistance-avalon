@@ -1,8 +1,5 @@
 # resistance-avalon
 Android implementation of <em>The Resistance: Avalon - Pass &amp; Play</em> game.
-
-![Game Logo](https://github.com/scottdjwallace/resistance-avalon/blob/master/img/mainlogo.png)
-
 ### Team Members
 
 Manager: [Laura Brooks] (https://github.com/lauramb)
@@ -17,3 +14,5 @@ Tester: [Brad Guner] (https://github.com/bradguner)
 - Customized Dialogs
 - Customized Check Boxes
 - Customized Action Bar
+
+![Poster](https://github.com/scottdjwallace/resistance-avalon/blob/master/TheResistanceAvalon/app/src/main/res/drawable/background.png)
