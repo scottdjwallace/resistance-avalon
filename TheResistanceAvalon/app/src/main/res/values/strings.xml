@@ -15,11 +15,11 @@
     <string name="enterNames">Enter Player Names</string>
     <string name="nameHolder">Player Name</string>
     <string name="motiveHolder">You are ...</string>
-    <string name="roundOne">Round 1</string>
-    <string name="roundTwo">Round 2</string>
-    <string name="roundThree">Round 3</string>
-    <string name="roundFour">Round 4</string>
-    <string name="roundFive">Round 5</string>
+    <string name="roundOne">Quest 1</string>
+    <string name="roundTwo">Quest 2</string>
+    <string name="roundThree">Quest 3</string>
+    <string name="roundFour">Quest 4</string>
+    <string name="roundFive">Quest 5</string>
 
     <!--HINTS-->
     <string name="player_name">Player\'s Name</string>
@@ -38,17 +38,17 @@
     <string name="ready">Ready to Reveal</string>
     <string name="title_activity_round_summary">Quest Summary</string>
     <string name="title_activity_round_one">Round 1</string>
-    <string name="beginRound">Begin Round</string>
-    <string name="title_activity_round_two">Round 2</string>
-    <string name="title_activity_round_three">Round 3</string>
-    <string name="title_activity_round_four">Round 4</string>
-    <string name="title_activity_round_five">Round 5y</string>
+    <string name="beginRound">Begin Quest</string>
+    <string name="title_activity_round_two">Quest 2</string>
+    <string name="title_activity_round_three">Quest 3</string>
+    <string name="title_activity_round_four">Quest 4</string>
+    <string name="title_activity_round_five">Quest 5</string>
     <string name="title_activity_assemble_team">Pick your Team</string>
     <string name="questLeader">The Quest Leader is </string>
     <string name="proposeTeam">Propose this Team</string>
     <string name="title_activity_team_vote">Vote on Proposed Team</string>
     <string name="teamSize">Please select</string>
-    <string name="vote">Are ok with this team?</string>
+    <string name="vote">Are OK with this team?</string>
     <string name="explanation">Check the box to pass the team.</string>
     <string name="proposedTeam">The proposed team is: </string>
     <string name="team">...</string>
@@ -65,8 +65,8 @@
     <string name="vote_message">Please select your vote.</string>
     <string name="pass">PASS</string>
     <string name="fail">FAIL</string>
-    <string name="round">Round Over</string>
-    <string name="nextRound">Next Round</string>
+    <string name="round">Quest Over</string>
+    <string name="nextRound">Next Quest</string>
     <string name="gameOver">GAME OVER</string>
     <string name="winners">The have won!</string>
     <string name="mainMenu">Main Menu</string>

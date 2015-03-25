@@ -113,7 +113,7 @@ public class QuestVoteActivity extends ActionBarActivity {
 
     public void openFailed(View v) {
         String title = "QUEST HAS FAILED";
-        String message = "Evil has succeeded in thworting the quest.";
+        String message = "Mordred\'s Minions rejoice!";
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage(message);
@@ -142,7 +142,7 @@ public class QuestVoteActivity extends ActionBarActivity {
 
     public void openPassed(View v) {
         String title = "QUEST WAS SUCCESSFUL!";
-        String message = "Servants of King Arthur rejoice!";
+        String message = "Knights of King Arthur rejoice!";
 
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(this);
         alertDialogBuilder.setMessage(message);

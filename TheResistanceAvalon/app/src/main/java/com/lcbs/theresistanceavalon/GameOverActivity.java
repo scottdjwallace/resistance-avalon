@@ -19,9 +19,9 @@ public class GameOverActivity extends ActionBarActivity {
         setContentView(R.layout.activity_game_over);
         winnersTextView = (TextView) findViewById(R.id.winners_textview);
         if (GameState.getInstance().getGoodScore() == 3){
-            winnersTextView.setText("King Arthur\'s Servants are victorious!\n\nPeace has spread through the land");
+            winnersTextView.setText("King Arthur\'s Knights have saved Avalon!");
         } else {
-            winnersTextView.setText("Evil has triumphed!\n\nFear has spread across the land");
+            winnersTextView.setText("Mordred\'s Minions have destroyed Avalon!");
         }
     }
 

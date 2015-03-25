@@ -84,7 +84,7 @@ public class EnterPlayerNames extends ActionBarActivity {
         for (int i = 0; i < NAMES_NEEDED; i++) {
             name = editTexts[i].getText().toString();
             if (name.matches("")) {
-                Toast.makeText(this, "You all needth a name first.", Toast.LENGTH_SHORT).show();
+                Toast.makeText(this, "All players must have a name.", Toast.LENGTH_SHORT).show();
                 return;
             }
             names[i] = name;
