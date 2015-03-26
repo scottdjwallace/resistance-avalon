@@ -37,7 +37,7 @@
     <string name="title_activity_reveal_players">Revealing Players</string>
     <string name="ready">Ready to Reveal</string>
     <string name="title_activity_round_summary">Quest Summary</string>
-    <string name="title_activity_round_one">Round 1</string>
+    <string name="title_activity_round_one">Quest 1</string>
     <string name="beginRound">Begin Quest</string>
     <string name="title_activity_round_two">Quest 2</string>
     <string name="title_activity_round_three">Quest 3</string>

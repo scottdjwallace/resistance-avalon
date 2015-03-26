@@ -48,6 +48,6 @@
         android:onClick="nextRound"
         android:background="#f3d28f"
         android:textColor="#433022"
-        android:text="@string/beginRound"/>
+        android:text="@string/nextRound"/>
 
 </LinearLayout>
