@@ -54,7 +54,7 @@ public class AssembleTeamActivity extends ActionBarActivity {
         questLeaderTextView = (TextView) findViewById(R.id.quest_leader_textview);
         questLeaderTextView.setText("The Quest Leader is " + CAPTAIN);
         teamSizeTextView = (TextView) findViewById(R.id.team_size_textview);
-        teamSizeTextView.setText("Please select " + TEAM_SIZE + " players");
+        teamSizeTextView.setText("Please select " + TEAM_SIZE + " players to embark on this Quest.");
         containerLayout = (LinearLayout)findViewById(R.id.linear2);
         listAllPlayers(ALL_PLAYERS);
     }
@@ -101,7 +101,7 @@ public class AssembleTeamActivity extends ActionBarActivity {
         final Button submitButton = new Button(this);
         submitButton.setText("Propose This Team");
         LinearLayout.LayoutParams lp = new LinearLayout.LayoutParams(LinearLayout.LayoutParams.MATCH_PARENT, LinearLayout.LayoutParams.WRAP_CONTENT);
-        lp.setMargins(250,20,250,0); // left, top, right, bottom
+        lp.setMargins(250,30,250,0); // left, top, right, bottom
         //submitButton.setWidth(200);
         //submitButton.setHeight(80);
         submitButton.setBackgroundColor(Color.parseColor("#f3d28f"));

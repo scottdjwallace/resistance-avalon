@@ -14,6 +14,7 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
 
     TextView nameTextView;
     TextView motiveTextView;
+    TextView motiveTextView2;
     TextView evilPlayersTextView;
     Button readyButton;
     private int counter;
@@ -30,6 +31,8 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
         readyButton.setOnClickListener(this);
         nameTextView = (TextView) findViewById(R.id.player_name_textview);
         motiveTextView = (TextView) findViewById(R.id.player_motive_textview);
+        motiveTextView2 = (TextView) findViewById(R.id.player_motive_textview2);
+        motiveTextView2.setText("");
         evilPlayersTextView = (TextView) findViewById(R.id.evil_players_textview);
         plyrs = GameState.getInstance().getPlayers();
         nameTextView.setText(plyrs[counter].getName());
@@ -74,11 +77,16 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
 
         if (reveal) {
             // reveal player
-            motiveTextView.setText("You are " + plyrs[counter].getMotive());
-            readyButton.setText("Next Player");
+            //motiveTextView.setText("You are " + plyrs[counter].getMotive());
+            readyButton.setText("Pass to Next Player");
             if (plyrs[counter].getMotive() == "Evil"){
+                motiveTextView.setText("You are a Minion of Mordred!");
+                motiveTextView2.setText("You fight for Evil.");
                 String evil = GameState.getInstance().listEvilPlayers(plyrs[counter]);
-                evilPlayersTextView.setText("Other Evil Players: " + evil);
+                evilPlayersTextView.setText("Other Minions: " + evil);
+            } else {
+                motiveTextView.setText("You are one of King Arthur\'s Knights!");
+                motiveTextView2.setText("You fight for Good.");
             }
             if (counter == num - 1) { readyButton.setText("Start Questing"); doneRevealing = true; }
             counter++;
@@ -86,6 +94,7 @@ public class RevealPlayersActivity extends ActionBarActivity implements View.OnC
             //ready next player
             nameTextView.setText(plyrs[counter].getName());
             motiveTextView.setText("You are ...");
+            motiveTextView2.setText("");
             evilPlayersTextView.setText("");
             readyButton.setText("Ready to Reveal");
         }

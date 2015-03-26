@@ -27,10 +27,10 @@ public class RoundSummaryActivity extends ActionBarActivity {
         roundOverTextView.setText("Quest " + m + " Over");
         goodScoreTextView = (TextView) findViewById(R.id.good_score_textview);
         int n = GameState.getInstance().getGoodScore();
-        goodScoreTextView.setText("Good:  " + n);
+        goodScoreTextView.setText("King Arthur\'s Knights:  " + n);
         badScoreTextView = (TextView) findViewById(R.id.bad_score_textview);
         int o = GameState.getInstance().getBadScore();
-        badScoreTextView.setText("Evil:  " + o);
+        badScoreTextView.setText("Mordred\'s Minions:  " + o);
     }
 
 
