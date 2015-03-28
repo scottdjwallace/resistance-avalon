@@ -185,6 +185,16 @@ public class GameState {
         return false;
     }
 
+    public String listEvilPlayers() {
+        String p = "";
+        for (int i = 0; i < NUM_OF_PLAYERS; i++) {
+            if (players[i].getMotive() == "Evil"){
+                    p += players[i].getName() + "   ";
+            }
+        }
+        return p;
+    }
+
     public String listEvilPlayers(Player player) {
         String p = "";
         for (int i = 0; i < NUM_OF_PLAYERS; i++) {

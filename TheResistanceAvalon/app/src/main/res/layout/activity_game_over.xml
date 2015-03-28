@@ -19,6 +19,16 @@
         android:textColor="#C5A495"
         android:layout_gravity="center_horizontal" />
 
+    <TextView
+        android:id="@+id/minions_textview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_marginTop="20dp"
+        android:text="@string/winners"
+        android:textColor="#C5A495"
+        android:layout_gravity="center_horizontal" />
+
     <Button
         android:id="@+id/menu_button"
         android:layout_width="200dp"

@@ -12,17 +12,21 @@ import android.widget.TextView;
 public class GameOverActivity extends ActionBarActivity {
 
     TextView winnersTextView;
+    TextView minionsTextView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_game_over);
         winnersTextView = (TextView) findViewById(R.id.winners_textview);
+        minionsTextView = (TextView) findViewById(R.id.minions_textview);
         if (GameState.getInstance().getGoodScore() == 3){
             winnersTextView.setText("King Arthur\'s Knights have saved Avalon!");
         } else {
-            winnersTextView.setText("Mordred\'s Minions have destroyed Avalon!");
+            winnersTextView.setText("Minions of Mordred have destroyed Avalon!");
         }
+        String evil = GameState.getInstance().listEvilPlayers();
+        minionsTextView.setText(evil + " were minions.");
     }
 
 
