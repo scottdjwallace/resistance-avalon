@@ -14,5 +14,6 @@ Tester: [Brad Guner] (https://github.com/bradguner)
 - Customized Dialogs
 - Customized Check Boxes
 - Customized Action Bar
+- List number of passes and fails during vote alert
 
 ![Poster](https://github.com/scottdjwallace/resistance-avalon/blob/master/TheResistanceAvalon/app/src/main/res/drawable/background.png)
