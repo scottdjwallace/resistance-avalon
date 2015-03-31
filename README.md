@@ -1,5 +1,6 @@
 # resistance-avalon
 Android implementation of <em>The Resistance: Avalon - Pass &amp; Play</em> game.
+Currently only available for <em>Android Tablets</em>.
 ### Team Members
 
 Manager: [Laura Brooks] (https://github.com/lauramb)
@@ -15,5 +16,6 @@ Tester: [Brad Guner] (https://github.com/bradguner)
 - Customized Check Boxes
 - Customized Action Bar
 - List number of passes and fails during vote alert
+- Optimize for mobile phones
 
 ![Poster](https://github.com/scottdjwallace/resistance-avalon/blob/master/TheResistanceAvalon/app/src/main/res/drawable/background.png)
