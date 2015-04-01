@@ -11,11 +11,13 @@ Programmer: [Scott Wallace] (https://github.com/scottdjwallace)
 
 Tester: [Brad Guner] (https://github.com/bradguner)
 
-### Next Steps
+### Next Steps for Deployment on Google Play Store
 - Customized Dialogs
 - Customized Check Boxes
 - Customized Action Bar
 - List number of passes and fails during vote alert
 - Optimize for mobile phones
+- Add special characters
+- iOS Version?
 
 ![Poster](https://github.com/scottdjwallace/resistance-avalon/blob/master/TheResistanceAvalon/app/src/main/res/drawable/background.png)
