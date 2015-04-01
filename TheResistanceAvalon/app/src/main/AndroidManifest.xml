@@ -9,7 +9,9 @@
         android:theme="@style/AppTheme" >
         <activity
             android:name=".MainActivity"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -18,59 +20,87 @@
         </activity>
         <activity
             android:name=".InstructionsActivity"
-            android:label="@string/HowToPlay" >
+            android:label="@string/HowToPlay"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".GameSetupActivity"
-            android:label="@string/setup" >
+            android:label="@string/setup"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".EnterPlayerNames"
-            android:label="@string/enterNames" >
+            android:label="@string/enterNames"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".RevealPlayersActivity"
-            android:label="@string/title_activity_reveal_players" >
+            android:label="@string/title_activity_reveal_players"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".RoundSummaryActivity"
-            android:label="@string/title_activity_round_summary" >
+            android:label="@string/title_activity_round_summary"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".RoundOneActivity"
-            android:label="@string/title_activity_round_one" >
+            android:label="@string/title_activity_round_one"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".RoundTwoActivity"
-            android:label="@string/title_activity_round_two" >
+            android:label="@string/title_activity_round_two"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".RoundThreeActivity"
-            android:label="@string/title_activity_round_three" >
+            android:label="@string/title_activity_round_three"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".RoundFourActivity"
-            android:label="@string/title_activity_round_four" >
+            android:label="@string/title_activity_round_four"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".RoundFiveActivity"
-            android:label="@string/title_activity_round_five" >
+            android:label="@string/title_activity_round_five"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".AssembleTeamActivity"
-            android:label="@string/title_activity_assemble_team" >
+            android:label="@string/title_activity_assemble_team"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".TeamVoteActivity"
-            android:label="@string/title_activity_team_vote" >
+            android:label="@string/title_activity_team_vote"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".GameOverActivity"
-            android:label="@string/title_activity_game_over" >
+            android:label="@string/title_activity_game_over"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
         <activity
             android:name=".QuestVoteActivity"
-            android:label="@string/title_activity_quest_vote" >
+            android:label="@string/title_activity_quest_vote"
+            android:configChanges="orientation"
+            android:screenOrientation="portrait">
         </activity>
     </application>
 
