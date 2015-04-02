@@ -28,7 +28,8 @@ public class Game {
                                                         {3,4,4,5,5}, // 8 players
                                                         {3,4,4,5,5}, // 9 players
                                                         {3,4,4,5,5}, // 10 players
-                                                        };
+                                                       };
+
 
     // Game constructor, protected
     protected Game() {
@@ -44,14 +45,17 @@ public class Game {
         teamThisRound = new Player[10];
     } // end Game constructor
 
+
     // getInstance returns the instance of our singleton class
     public static Game getInstance() {
         if (instance == null) instance = new Game();
         return instance;
     } // end getInstance
 
-    // Resets all game's values
+
+    // Reset methods
     public void resetGame() { instance = null; }
+
 
     // accessors for private variables
     public int getNumberOfPlayers() { return numberOfPlayers; }
@@ -66,6 +70,35 @@ public class Game {
     // end accessors
 
 
+    // sets number of player in the game, and how many good/bad players there are
+    // # of Players     Good    Evil
+    //          5       3       2
+    //          6       4       2
+    //          7       4       3
+    //          8       5       3
+    //          9       6       3
+    //         10       6       4
+    public void setNumberOfPlayers(int n) {
+        numberOfPlayers = n;
+        if (n % 2 == 0) {
+            int half = n / 2;
+            numberOfGoodPlayers = half + 1;
+            numberOfBadPlayers = half - 1;
+        } else {
+            int half = (n+1) / 2;
+            numberOfGoodPlayers = half;
+            numberOfBadPlayers = half - 1;
+        }
+        if (n == 9) { numberOfBadPlayers = 3; numberOfGoodPlayers = 6; }
+    } // setNumberOfPlayers
+
+
+    // if a team gets rejected this will increment
+    public void addRejectedRound() { numberOfRejectedRounds++; }
+
+
+    // increments to next round
+    public void addRound() { currentRound++; }
 
 
 
@@ -74,63 +107,8 @@ public class Game {
 
 
 
-
-
-    // sets number of player in the game
-    public void setNumPlayers(int num) {
-        NUM_OF_PLAYERS = num;
-        setGoodBad(NUM_OF_PLAYERS);
-    } // setNumPlayers
-
-    // sets number of good and bad players in the game, called in setNumPlayers
-    private void setGoodBad(int num) {
-        switch (num) {
-            case 5:
-                NUM_GOOD_PLAYERS = 3;
-                NUM_BAD_PLAYERS = 2;
-                break;
-            case 6:
-                NUM_GOOD_PLAYERS = 4;
-                NUM_BAD_PLAYERS = 2;
-                break;
-            case 7:
-                NUM_GOOD_PLAYERS = 4;
-                NUM_BAD_PLAYERS = 3;
-                break;
-            case 8:
-                NUM_GOOD_PLAYERS = 5;
-                NUM_BAD_PLAYERS = 3;
-                break;
-            case 9:
-                NUM_GOOD_PLAYERS = 6;
-                NUM_BAD_PLAYERS = 3;
-                break;
-            case 10:
-                NUM_GOOD_PLAYERS = 6;
-                NUM_BAD_PLAYERS = 4;
-                break;
-            default:
-                NUM_GOOD_PLAYERS = 3;
-                NUM_BAD_PLAYERS = 2;
-        } // end switch
-    } // end setGoodBad
-
-    // increments REJECTED_ROUNDS when a quest team has been voted no on
-    public void newRejectedRound() {
-        REJECTED_ROUNDS++;
-    } // end newRejectedRound
-
-    // resets REJECTED_ROUNDS
-    public void resetRejectedRounds() {
-        REJECTED_ROUNDS = 0;
-    } // end resetRejectedRounds
-
-    // increments round counter
-    public void newRound() {
-        ROUND++;
-    } // end newRound
-
-    // increments scores after a round has completed
+    // increments scores after
+    // a round has completed
     public void roundWin(String team) {
         if (team == "good") {
             GOOD_SCORE++;
