@@ -10,6 +10,13 @@ public class Player {
     private int team;
     // good == 1, bad == 0
 
+    public Player ()
+    {
+        this.name = "Player";
+        this.team = -1;
+    }
+
+
     // creates new Player
     public Player (String name, int team)
     {
@@ -17,19 +24,27 @@ public class Player {
         this.team = team;
     } // end Player constructor
 
+
     // accesses Player's name
     public String getName()
     {
         if (name != null)
             return name;
         return "null";
-    } // end getMotive
+    } // end getName
 
-    // accesses Player's Motive
-    public String getMotive()
+
+    // accesses Player's Team as a string
+    public String getTeamString()
     {
         if (team == 1) return "Good";
         return "Evil";
-    } // end getMotive
+    } // end getTeamString
+
+
+    // accesses Player's Team as an int
+    public int getTeamInt(){
+        return team;
+    }
 
 } // end Game

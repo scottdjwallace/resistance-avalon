@@ -53,8 +53,16 @@ public class Game {
     } // end getInstance
 
 
-    // Reset methods
+    // Resets all variables in game
     public void resetGame() { instance = null; }
+
+
+    // creates a random Int between min & max
+    private int randInt(int min, int max) {
+        Random rand = new Random();
+        int randomNum = rand.nextInt((max - min) + 1) + min;
+        return randomNum;
+    } // end randInt
 
 
     // accessors for private variables
@@ -67,6 +75,7 @@ public class Game {
     public int getGoodScore() { return goodScore; }
     public int getNumberOfPlayersThisRound() { return playersPerRound[numberOfPlayers - 5][currentRound - 1]; }
     public Player[] getPlayers() { return players; }
+    public Player[] getTeamThisRound() { return teamThisRound; }
     // end accessors
 
 
@@ -97,106 +106,108 @@ public class Game {
     public void addRejectedRound() { numberOfRejectedRounds++; }
 
 
-    // increments to next round
-    public void addRound() { currentRound++; }
-
-
-
-
-
-
-
-
-    // increments scores after
-    // a round has completed
-    public void roundWin(String team) {
-        if (team == "good") {
-            GOOD_SCORE++;
+    // increments to next round, and updates score
+    public void finishRound(String winner) {
+        currentRound++;
+        if (winner == "good") {
+            goodScore++;
         } else {
-            BAD_SCORE++;
+            badScore++;
         }
-    } // end roundWin
+    } // finishRound
+
 
     // takes list of user inputted names and creates a player object with a motive
-    public void createPlayers(String[] names) {
+    public void createPlayers(String[] givenNames) {
         int good = 0;
-        int bad = 0;
-        for (int i = 0; i < NUM_OF_PLAYERS; i++) {
-            int motive = randInt(0,1);
-            if (motive == 0 && bad < NUM_BAD_PLAYERS) { // evil and still need evil
-                bad++;
+        int evil = 0;
+
+        for (int i = 0; i < numberOfPlayers; i++) {
+            int team = randInt(0,1);
+            if (team == 0 && evil < numberOfBadPlayers) { // evil && need evil
+                evil++;
             }
-            else if (motive == 0 && bad == NUM_BAD_PLAYERS) { // evil and we don't need evil
-                motive = 1;
+            else if (team == 1 && good < numberOfGoodPlayers) { // good && need good
                 good++;
             }
-            else if (motive == 1 && good < NUM_GOOD_PLAYERS) { // good and we need good
+            else if (team == 0 && evil == numberOfBadPlayers) { // evil but need good
+                team = 1;
                 good++;
+            } else { // good but need evil
+                team = 0;
+                evil++;
             }
-            else { // good and we don't need good
-                motive = 0;
-                bad++;
-            }
-            players[i] = new Player(names[i], motive);
-        }
+            players[i] = new Player(givenNames[i], team);
+        } // end for loop
     } // end createPlayers
 
-    // creates a random Int
-    private int randInt(int min, int max) {
-        Random rand = new Random();
-        int randomNum = rand.nextInt((max - min) + 1) + min;
-        return randomNum;
-    } // end randInt
 
-    public String getTeamCaptain() {
-        int i = NEXT_PLAYER;
-        if (i > NUM_OF_PLAYERS - 1) {
+    // picks a team captain to propose a team
+    public String pickTeamCaptain() {
+        int i = nextTeamCaptain;
+        if (i > numberOfPlayers - 1) {
             i = 0;
-            NEXT_PLAYER = 1;
+            nextTeamCaptain = 1;
         } else {
-            NEXT_PLAYER++;
+            nextTeamCaptain++;
         }
         return players[i].getName();
-    }
+    } // end pickTeamCaptain
 
-    public void setTeamThisRound(String[] selected) {
-        TEAM_THIS_ROUND = selected;
-    }
-    public String[] getTeamThisRound() { return TEAM_THIS_ROUND; }
 
-    public boolean gameOver() {
-        if (REJECTED_ROUNDS == 5) {
+    // sets the selected team this round
+    public void pickTeamThisRound(Player[] selected) {
+        teamThisRound = selected;
+    } // end pickTeamThisRound
+
+
+    // checks to see if game is over
+    public boolean isGameOver() {
+        if (numberOfRejectedRounds == 5)
             return true;
-        }
-        if (GOOD_SCORE == 3) {
+        if (goodScore == 3)
             return true;
-        }
-        if (BAD_SCORE == 3){
+        if (badScore == 3)
             return true;
-        }
         return false;
+    } // end isGameOver
+
+
+    // lists all evil players
+    public String listAllEvilPlayers() {
+        String allEvil = "";
+        int added = 0;
+        for (int i = 0; i < numberOfPlayers; i++) {
+            if (players[i].getTeamInt() == 0){
+                if (added == numberOfBadPlayers){
+                    allEvil += players[i].getName();
+                } else {
+                    allEvil += players[i].getName() + ",  ";
+                    added++;
+                } // end if
+            } // end if
+        } // end for loop
+        return allEvil;
+    } // end listAllEvilPlayers
+
+
+    // lists all other evil players and excludes doNotList
+    public String listOtherEvilPlayers(Player doNotList) {
+        String allEvil = "";
+        int added = 0;
+        for (int i = 0; i < numberOfPlayers; i++) {
+            if (players[i].getTeamInt() == 0){
+                if (players[i].getName() != doNotList.getName()) {
+                    if (added == numberOfBadPlayers) {
+                        allEvil += players[i].getName();
+                    } else {
+                        allEvil += players[i].getName() + ",  ";
+                        added++;
+                    } // end if
+                } // end if
+            } // end if
+        } // end for loop
+        return allEvil;
     }
 
-    public String listEvilPlayers() {
-        String p = "";
-        for (int i = 0; i < NUM_OF_PLAYERS; i++) {
-            if (players[i].getMotive() == "Evil"){
-                p += players[i].getName() + "   ";
-            }
-        }
-        return p;
-    }
-
-    public String listEvilPlayers(Player player) {
-        String p = "";
-        for (int i = 0; i < NUM_OF_PLAYERS; i++) {
-            if (players[i].getMotive() == "Evil"){
-                if (players[i].getName() != player.getName()){
-                    p += players[i].getName() + "   ";
-                }
-            }
-        }
-        return p;
-    }
-
-} // end GameState.java
+} // end Game.java
